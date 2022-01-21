@@ -1,6 +1,9 @@
 {
   "name": "knowledege_base",
   "version": "0.1.0",
+   "engines": {
+    "node": ">=50.9" // intentionally so big version number
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
