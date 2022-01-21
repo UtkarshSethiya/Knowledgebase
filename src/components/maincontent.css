@@ -1,0 +1,35 @@
+.cont_container{
+    padding: 25px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(201, 200, 200);
+    cursor: pointer;
+  }
+  
+  .cont_container:hover{
+    transform: scale(1.05);
+    transition-duration: .5s;
+    box-shadow: 1px 1px 15px 3px #cbcbcb;
+  }
+  
+  i{
+    font-size: 25px !important;
+  }
+  h6{
+    color:rgb(4, 84, 233);
+    font-weight: 700;
+  }
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+  .bi-person-fill{
+    font-size: 15px !important;
+  }

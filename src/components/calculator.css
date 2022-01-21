@@ -1,0 +1,94 @@
+.calcontainer{
+ border:1px solid lightgray;
+ border-radius: 20px;
+ padding: 20px;
+ box-shadow: 1px 1px 15px 3px #cbcbcb;
+ background: rgb(251, 254, 255);
+}
+#flexCheckChecked{
+    font-size: 30px !important;
+}
+.step{
+    padding: 20px;
+}
+h3{
+    text-align: center;
+font-weight: 700;
+}
+h5{
+    font-weight: 700 !important;  
+}
+.form-range{
+    outline: none !important;
+    border: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+
+	background-color: rgb(194, 199, 255);
+	height: 8px !important;
+
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+   
+	
+
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	
+}
+
+.value{
+    border-radius: 5px;
+    padding: 3px;
+    border:1px solid blue ;
+    
+}
+
+.zero{
+    text-align: end;
+}
+/* <div className="  row step ">   <pre></pre>
+                <h3>Step 5 : Select your Service</h3>
+                <pre></pre>   <pre></pre>
+                   <div className='col-3'><img src={dedciated} height='100px' width='200px' ></img></div>
+                   <div className='col-8'>
+                       <h5>Dedicated Event Expert</h5>
+                       <p>
+                       Your dedicated event manager is with you every step of the way, working closely on the communication, logistics, set-up and matchmaking data with you.
+                       </p>
+                       
+                   </div>
+                  <div className='col-1'><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" ></input>
+ 
+ </div>
+                  
+                   
+                    </div>
+
+
+
+
+
+
+                    <div className="  row step ">
+               
+               <pre></pre>
+                  <div className='col-3'><img src={onsite} height='100px' width='200px' ></img></div>
+                  <div className='col-8'>
+                      <h5>Onsite Support</h5>
+                      <p>
+                      A Swapcard networking expert will support your event online or onsite to provide assistance to attendees and training to exhibitors.
+                      </p>
+                      
+                  </div>
+                 <div className='col-1'><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" ></input>
+
+</div>
+                 
+                  
+                   </div>*/

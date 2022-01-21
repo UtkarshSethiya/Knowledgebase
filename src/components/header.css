@@ -1,0 +1,74 @@
+
+.fontAwesome{ font-family: 'Helvetica', FontAwesome, sans-serif; }
+
+.main{
+    background-color: rgb(255, 248, 248) !important;
+}
+.navbar-brand{
+  color: black !important;
+  font-weight: 400 !important;
+}
+input{
+  padding: 10px;
+  border: 1px solid rgb(70, 130, 194);
+ width: 100%;
+  font-size: 20px;
+ border-radius: 25px;
+outline:  rgb(70, 130, 194);
+
+}
+::placeholder {
+  color:rgb(70, 130, 194) ;
+  opacity: 0.7; /* Firefox */
+}
+.bi-cash-coin{
+  font-size: 16px !important;
+}
+.bi-calculator-fill{
+  font-size: 16px !important; 
+}
+
+.btn1{
+    background-color: orangered;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 8px;
+  border:none;
+}
+
+.searchbox{
+  text-align: center;
+}
+
+.subscribe{
+
+  display: flex;
+  justify-content: space-around;
+}
+.logo{
+  display: flex;
+  justify-content: space-around;
+}
+h2{
+  font-weight: 600;
+  color: rgb(0, 89, 255);
+}
+.faq{
+  text-align: center;
+ 
+}
+
+@media  screen and  ( max-width:1200px) {
+
+  .btn1{
+    display: none;
+  }
+  .btn2{
+    margin-left: 5px;
+    font-size: 10px;
+  }
+  .navbar-brand{
+    font-size: 10px;
+  }
+}

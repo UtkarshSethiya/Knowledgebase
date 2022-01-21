@@ -1,0 +1,9 @@
+.form{
+    border:1px solid lightgray;
+ border-radius: 10px;
+ padding: 10px;
+ box-shadow: 1px 1px 5px 3px #e7e7e7;
+}
+#validationTextarea{
+    height: 300px;
+}

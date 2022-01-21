@@ -1,38 +1,22 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*
+import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from "react-dom";
+import Calculator from './components/calculator';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+<Routes>
+      <Route path="/" element={<App />} />
+      <Route path="calculator" element={<Calculator />} />
+     
+    </Routes>
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+     <Link className="btn btn2 btn-outline-primary" to="/calculator">Calculator</Link>
+*/

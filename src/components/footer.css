@@ -1,0 +1,21 @@
+.social{
+justify-content: center;
+background: rgb(240, 248, 255);  
+}
+
+.contact{
+    color: black; font-size: 15px;
+}
+.copyright{
+    color: white; 
+    background-color: rgb(125, 125, 125);
+     text-align: center;
+}
+.contcontact{
+  
+  text-align: center;
+    justify-content: center;
+}
+.social{
+    padding: 5px;
+}
