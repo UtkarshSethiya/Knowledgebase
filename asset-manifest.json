@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Knowledgebase/static/css/main.53d745d0.css",
+    "main.js": "/Knowledgebase/static/js/main.ba4c2811.js",
+    "static/media/logo.png": "/Knowledgebase/static/media/logo.57e67854aab97a7d9aa6.png",
+    "static/media/whitelabel.png": "/Knowledgebase/static/media/whitelabel.185945ecf11e292ed050.png",
+    "static/media/dedciated.png": "/Knowledgebase/static/media/dedciated.a038f518b39e44902e22.png",
+    "static/media/onsite.png": "/Knowledgebase/static/media/onsite.42e4c25af8932223cce3.png",
+    "index.html": "/Knowledgebase/index.html",
+    "main.53d745d0.css.map": "/Knowledgebase/static/css/main.53d745d0.css.map",
+    "main.ba4c2811.js.map": "/Knowledgebase/static/js/main.ba4c2811.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53d745d0.css",
+    "static/js/main.ba4c2811.js"
+  ]
+}
