@@ -1,9 +1,6 @@
 {
   "name": "knowledege_base",
   "version": "0.1.0",
-  "engines": {
-    "node": "v16.13.1"
-  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
