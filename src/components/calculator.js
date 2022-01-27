@@ -1,17 +1,22 @@
 
 import './calculator.css'
 import React, { useState } from 'react';
-import whitelabel from './images/whitelabel.png'
-import dedciated from './images/dedciated.png'
-import onsite from './images/onsite.png'
+import { Link } from "react-router-dom";
+import quest from './images/quest.png';
+import logo from './images/logo.png';
+
+
+  
+  
+
 function Calculator(){
     
  
 const[no,setno]=useState(1);
 const[attend,setattend]=useState(200);
 const[exhibitor,setexhibitor]=useState(3);
-const[customhall,setcustomhall]=useState(0);
-const[custombooth,setcustombooth]=useState(0);
+const[customhall,setcustomhall]=useState(2);
+const[custombooth,setcustombooth]=useState(1);
 const[whitelabel,setwhitelabel]=useState(0);
 const[customlanding,setcustomlanding]=useState(0);
 const[customlobby,setcustomlobby]=useState(0);
@@ -25,68 +30,109 @@ const[hour,sethour]=useState(0);
 
 
 
+
 function eventnumber(event){
-    setno(event.target.value)
+    setno(event.target.value);
+    document.getElementById("eventno").addEventListener("change",function(evt){
+        if(document.getElementById("eventno").value>30){
+            document.getElementById("eventno").value=30;
+            
+           event.preventDefault();
+         }
+         if(document.getElementById("eventno").value<1){
+            document.getElementById("eventno").value=1;
+            
+           event.preventDefault();
+         }
+         setno(document.getElementById("eventno").value);
+        })
+      
+    
     
 }
 
 
 
-function attendenumber(event){
-    setattend(event.target.value)
-}
-
-function exhibitornumber(event){
-    setexhibitor(event.target.value);
-}
-function customhallnumber(event){
-    setcustomhall(event.target.value);
-}
-function customboothnumber(event){
-    setcustombooth(event.target.value);
-}
-
-function whitelabelnumber(){
-    if(document.getElementById("flexCheckChecked").checked==false){
-        setwhitelabel(0)
-      };
-      if(document.getElementById("flexCheckChecked").checked==true){
-       setwhitelabel(no*250);
-      }
-}
-function customlandingnumber(event){
-    setcustomlanding(event.target.value);
-}
-function customlobbynumber(event){
-    setcustomlobby(event.target.value);
-}
-
-function setthreenumber(){
-    if(document.getElementById("three").checked==false){
-        setthree(0)
-      };
-      if(document.getElementById("three").checked==true){
-       setthree(no*300);
-      }
-}
-function gamesnumber(event){
-    setgames(event.target.value)
-}
-function boothnumber(event){
-    setbooth(event.target.value);
-}
-function auditoriumnumber(event){
-    setauditorium(event.target.value)
-}
-
-function hournumber(event){
-    sethour(event.target.value)
-}
 
 
-let total=( parseInt((attend-200)/25)*20) + parseInt((exhibitor-3)*100)+ parseInt((customhall)*100) + parseInt((custombooth)*100)+  parseInt(whitelabel )+ parseInt((customlanding)*200)+ parseInt(three)+ parseInt((customlobby)*200)+parseInt((auditorium)*200)+ parseInt((games-1)*50)+ parseInt(booth*100)+  parseInt((hour)*75);
-    return(
-        <div className="row">
+/*radio button functions*/
+
+function twohundred(){
+    document.getElementById('plan').innerHTML='';
+    document.getElementById('plan').innerHTML="Selected Plan : Small plan";
+    document.getElementById('medium').style.display='none';
+    document.getElementById('small').style.display='block';
+    document.getElementById('custom').style.display='none';
+}
+
+function fivehundred(){
+    document.getElementById('plan').innerHTML='';
+    document.getElementById('plan').innerHTML="Selected Plan : Medium plan";
+    document.getElementById('medium').style.display='block';
+    document.getElementById('small').style.display='none';
+    document.getElementById('custom').style.display='none';
+}
+function thousand(){
+    document.getElementById('plan').innerHTML='';
+    document.getElementById('plan').innerHTML="Selected Plan : Custom plan";
+    document.getElementById('medium').style.display='none';
+    document.getElementById('small').style.display='none';
+    document.getElementById('custom').style.display='block';
+   
+}
+
+/*Cost of all features*/
+
+let attendcost=((attend-200)/25)*20;
+let exhibitorcost=(exhibitor-3)*100;
+let customhallcost=(customhall-2)*100;
+let customboothcost=(custombooth)*100;
+let whitelabelcost=whitelabel;
+let customlandingcost=(customlanding)*200;
+let threecost=three;
+let customlobbycost=(customlobby)*200;
+let auditoriumcost=(auditorium)*200;
+let gamescost=(games-1)*50;
+let boothcost=booth*100;
+let hourcost=(hour)*75
+
+
+
+
+/*let total=( parseInt((attend-200)/25)*20) + parseInt((exhibitor-3)*100)+ parseInt((customhall)*100) + parseInt((custombooth)*100)+  parseInt(whitelabel )+ parseInt((customlanding)*200)+ parseInt(three)+ parseInt((customlobby)*200)+parseInt((auditorium)*200)+ parseInt((games-1)*50)+ parseInt(booth*100)+  parseInt((hour)*75);*/
+let total=attendcost+exhibitorcost +customhallcost+customboothcost+whitelabelcost+customlandingcost+threecost+customlobbycost+auditoriumcost+gamescost+boothcost+hourcost;   
+
+
+return(
+
+   
+        <div className="row "> 
+        <div className='row  bg-dark'>
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid row">
+    <div className='col-3  logo  '>
+    <a class="navbar-brand" href="https://bizconnectevents.com/" ><img src={logo} height="50px" width="80px"></img>   </a>
+    <Link class="navbar-brand home " to='/home'> Home</Link>
+    
+    </div>
+    
+<div className='col-6   '  > </div>
+
+    <div className='col-2  subscribe'>
+    
+    <button className="btn btn2 btn-outline-light" type="submit"><i class="bi bi-cash-coin"></i> Pricing</button>
+  
+    
+    <button className="btn btn1 " type="submit">Subscribe</button>
+    </div>
+    
+  </div>
+</nav></div>
+    
+        <div className='quest'><a href='https://www.google.com/'><img src={quest} height='40px' width='40px'></img></a></div>
+  
+       
+
             
             <pre></pre>
             <h1>Calculator</h1>
@@ -101,29 +147,21 @@ let total=( parseInt((attend-200)/25)*20) + parseInt((exhibitor-3)*100)+ parseIn
             
             
             <div className="col-md-10 calcontainer">
+            
+
             <div className="row step ">
-            <h3>Step1 : Choose Your Plan</h3>
-           <pre></pre><pre></pre>
-            <select class="form-select" aria-label="Default select example">
-            <option selected>Choose Your Plan</option>
-  <option value="1">Tester</option>
-  <option value="2">Small</option>
-  <option value="3">Medium</option>
-  <option value="4">Large</option>
-</select> <pre></pre> <pre></pre></div>
-            <div className="row step ">
-           <h3>Step2 : Customize Your Pricing</h3>
+           <h3>Step1 : Customize Your Pricing</h3>
            <pre></pre>
            
-           <h5>Number of Events</h5>
+           <h5>Number of Events <a title='Select number of Events required'><i class="bi bi-info-circle-fill"></i></a></h5>
                     <div className='col-6 ' >
                    
-                    <label for="customRange1" class="form-label">Define the number of Events</label>
+                    <label for="customRange1" class="form-label">Select the number of Events</label>
                     <pre></pre>
                     <div className='row'>
                     <span className='col-1'>1</span>
-                    <div className='col-10'><input type="range" min="1" max="100" step="1" onChange={eventnumber}  class="form-range  " id="customRange1"/></div>
-                    <span className='col-1'>100</span>
+                    <div className='col-10'><input type="range" value={no} min="1" max="30" step="1" onChange={eventnumber}  class="form-range  " id="customRange1"/></div>
+                    <span className='col-1'>30</span>
                         
                         </div>
 
@@ -131,7 +169,7 @@ let total=( parseInt((attend-200)/25)*20) + parseInt((exhibitor-3)*100)+ parseIn
                      <div className='col-2'></div>
                      <div className='col-3 '>
                      <div id='rangeValue'>
-                        <input className='value' value={no} ></input>
+                        <input id='eventno' className='value' type='number' value={no} min="1" max="30" step="1" onChange={eventnumber} ></input>
                      </div>
                      </div>
                      <pre></pre>   <pre></pre>   
@@ -141,7 +179,7 @@ let total=( parseInt((attend-200)/25)*20) + parseInt((exhibitor-3)*100)+ parseIn
 
             <div className="row step ">
          
-            <h5>Date</h5>
+            <h5>Date <a title='Select your first event date'><i class="bi bi-info-circle-fill"></i></a> </h5>
             <div className='col-6'>
               
                 
@@ -154,188 +192,37 @@ let total=( parseInt((attend-200)/25)*20) + parseInt((exhibitor-3)*100)+ parseIn
             <pre></pre>   <pre></pre>   
             </div>
 
-            <div className="row step ">
-                <h3>Step 3 : Select your volume</h3>
+            <div className="row step  ">
+                <h3>Step 2 : Choose Your Plan </h3>
                 <pre></pre>
-                <h5>Attendees Volume</h5>
-                <div className='col-6'>
-                 
-                 <p>Define the volume of attendees for all your events</p>
-                   <div className='row'>
-                    <span className='col-1'>200</span>
-                    <div className='col-10'><input type="range" min="200" max="10000" step="25"  onChange={attendenumber}  class="form-range  " id="customRange1"/></div>
-                    <span className='col-1'>10000</span>
-                    
-                        
-                        </div>
-                       
-                </div>
-                <div className='col-2'></div>
-                <div className='col-3 '>
-                    <input className='value' value={attend}></input> <pre></pre>
-                    <h6>Cost: ${((attend-200)/25)*20}</h6>
-                </div>
-                </div>
-
-                <div className="row step  ">
-                <pre></pre> <pre></pre>
-                <h5>Exhibitors Volume</h5>
-                <div className='col-12'>
-                 
-                 <p>Extra Booth($100/booth)</p>
-                   <div className='row'>
-                  
-                    <div className='col-1  zero'>3</div>
-                    <div className='col-5'><input type="range" min="3" max="100" step="1" onChange={exhibitornumber}  class="form-range  " id="customRange1"/></div>
-                    <span className='col-1'>100</span>
-                    <div className='col-2'></div>
-                    <div className='col-2'>
-                    <input className='value' value={exhibitor}></input><pre></pre>
-                    <h6>Cost: ${(exhibitor-3)*100}</h6>
-                </div>
-                   <pre></pre>
-                    
-                    <p>Buy Custom Hall Template </p>
-                    <span className='col-1 zero'>0</span>
-                    <div className='col-5'><input type="range" min="0" max="50" step="1" onChange={customhallnumber}  class="form-range  " id="customRange1"/></div>
-                    <span className='col-1'>50</span>
-                    <div className='col-2'></div>
-                    <div className='col-2'>
-                    <input className='value' value={customhall} ></input><pre></pre>
-                    <h6>Cost: ${(customhall)*100}</h6>
-                    </div>
-
-                    <pre></pre>
-                    
-                    <p>Buy Custom Booth Template  </p>
-                    <span className='col-1 zero'>0</span>
-                    <div className='col-5'><input type="range" min="0" max="50" step="1" onChange={customboothnumber}  class="form-range  " id="customRange1"/></div>
-                    <span className='col-1'>50</span>
-                    <div className='col-2'></div>
-                    <div className='col-2'>
-                    <input className='value' value={custombooth} ></input><pre></pre>
-                    <h6>Cost: ${(custombooth)*100}</h6>
-                    </div>
-                        
-                        </div>
-                       
-                </div>
+                <h5>Select no of Attendees to get your plan <a title='Give us the number of Attendes in the event '><i class="bi bi-info-circle-fill"></i></a></h5>
+                <div className='row' ><pre></pre>
+                 <div class="form-check col-3">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onClick={twohundred} ></input>
+  <label class="form-check-label" for="flexRadioDefault1">
+    200 to 500 
+  </label>
+</div>
+<div class="form-check col-3">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={fivehundred} ></input>
+  <label class="form-check-label" for="flexRadioDefault2">
+    500 to 1000 
+  </label>
+</div>
+<div class="form-check col-3">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" onClick={thousand} ></input>
+  <label class="form-check-label" for="flexRadioDefault2">
+  1000+ 
+  </label>
+</div>
+                 </div>
+                 <pre></pre><pre></pre>
+               <div id='plancont'><h6   id='plan'></h6><Link id='custom' to='/calculator_custom' className='  btn btn-outline-primary btn2'>Continue</Link> <Link id='small' to='/calculator_small' className='  btn btn-outline-primary btn2'>Continue</Link><Link id='medium' to='/calculator_medium' className='  btn btn-outline-primary btn2'>Continue</Link></div>
                
+                </div>
                 
-                </div>
-
-                <div className="row step "><pre></pre>
-                <h3>Step 4 : Select your Module</h3>
-                <pre></pre><pre></pre>
-                   <div className='col-3'><img src={whitelabel} height='100px' width='200px' ></img></div>
-                   <div className='col-7   '>
-                       <h5>White Label ($250/event)</h5>
-                       <p>
-                       Showcase your brand! Create a white-label platform using your brand name, font, colours etc for an exclusive experience.
-                       </p>
-                       
-                   </div>
-                  <div className='col-2'><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" onChange={whitelabelnumber}></input><pre></pre>  <h6>Cost: ${whitelabel }</h6>
- 
- </div>
-                  
-                   
-                    </div>
-
-                    <div className="  row step ">
-                        <h3> Step 5: Landing/Event Microsite</h3>
-                        <p>Buy Custom Landing Template  </p>
-                    <span className='col-1 zero'>0</span>
-                    <div className='col-5'><input type="range" min="0" max="50" step="1" onChange={customlandingnumber}  class="form-range  " id="customRange1"/></div>
-                    <span className='col-1'>50</span>
-                    <div className='col-2'></div>
-                    <div className='col-2'>
-                    <input className='value' value={customlanding} ></input><pre></pre>
-                    <h6>Cost: ${(customlanding)*200}</h6></div>
-                         </div>
-
-                         <div className="  row step ">
-                        <h3>Step 6: 3D and 360° Walkthrus </h3>
+              
                         
-                        <div className='col-4'><p>Branded Lobby Walkthrough ( Max to 3 doors ) ($300/event) </p></div>
-                    <div className='col-4'></div>
-                
-                    <div className='col-2'></div>
-                    <div className='col-2'>
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked  " id="three" onChange={setthreenumber}></input><pre></pre>
-                    <h6>Cost: ${three}</h6></div>
-                         </div>
-
-
-
-                         <div className="  row step ">
-                        <h3>Step 7: Lobby</h3>
-                        <p>Buy Custom Lobby Template   </p>
-                    <span className='col-1 zero'>0</span>
-                    <div className='col-5'><input type="range" min="0" max="50" step="1" onChange={customlobbynumber}  class="form-range  " id="customRange1"/></div>
-                    <span className='col-1'>50</span>
-                    <div className='col-2'></div>
-                    <div className='col-2'>
-                    <input className='value' value={customlobby} ></input><pre></pre>
-                    <h6>Cost: ${(customlobby)*200}</h6></div>
-                         </div>
-
-
-                         <div className="  row step ">
-                        <h3>Step 8: Auditorium </h3>
-                        <p>Buy Custom Auditorium Template  </p>
-                    <span className='col-1 zero'>0</span>
-                    <div className='col-5'><input type="range" min="0" max="50" step="1" onChange={auditoriumnumber}  class="form-range  " id="customRange1"/></div>
-                    <span className='col-1'>50</span>
-                    <div className='col-2'></div>
-                    <div className='col-2'>
-                    <input className='value' value={auditorium} ></input><pre></pre>
-                    <h6>Cost: ${(auditorium)*200}</h6></div>
-                         </div>
-
-
-                         <div className="  row step ">
-                        <h3>Step 9: Engagement </h3>
-                        <p>Games with Leaderboard ($50/game) </p>
-                        
-                        <span className='col-1 zero'>1</span>
-                    <div className='col-5'><input type="range" min="1" max="50" step="1" onChange={gamesnumber}  class="form-range  " id="customRange1"/></div>
-                    <span className='col-1'>50</span>
-                    <div className='col-2'></div>
-                    <div className='col-2'>
-                    <input className='value' value={games} ></input><pre></pre>
-                    <h6>Cost: ${(games-1)*50}</h6></div>
-
- 
-               <p>Photo Booth ($100/month) </p>
-                    <span className='col-1 zero'>0</span>
-                    <div className='col-5'><input type="range" min="0" max="10" step="1" onChange={boothnumber}  class="form-range  " id="customRange1"/></div>
-                    <span className='col-1'>10</span>
-                   <div className='col-2'></div>
-                    <div className='col-2'>
-                    <input className='value' value={booth} ></input><pre></pre>
-                    <h6>Cost: ${booth*100}</h6></div>
-
-                         </div>
-
-
-                         <div className="  row step ">
-                        <h3>Step 10: Support </h3>
-                        <p>Onboarding Executive (Tech Support, 1st Event Free Tech Support 
-Post 1st Event - Per hr $ 75) </p>
-                    <span className='col-1 zero'>0</span>
-                    <div className='col-5'><input type="range" min="0" max="50" step="1" onChange={hournumber}  class="form-range  " id="customRange1"/></div>
-                    <span className='col-1'>50 hours</span>
-                    <div className='col-2'></div>
-                    <div className='col-2'>
-                    <input className='value' value={hour} ></input><pre></pre>
-                    <h6>Cost: ${(hour)*75}</h6></div>
-                         </div>
-
-                    
-               
-               
-                         <h2><pre></pre>Total:-${total} </h2>
                 
             </div>
             

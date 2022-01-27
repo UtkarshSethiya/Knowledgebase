@@ -1,11 +1,7 @@
-import logo from './images/logo.png';
-import './header.css';
 import { Link } from "react-router-dom";
-import Calculator from './calculator';
+import logo from './images/logo.png';
 
-function Header(){
-
-
+function Header2(){
 return(<div className='row main bg-light'>
 <nav class="navbar navbar-expand-lg navbar-light ">
   <div class="container-fluid row">
@@ -26,31 +22,6 @@ return(<div className='row main bg-light'>
     </div>
     
   </div>
-</nav>
-
-<div className='row'>
-<div className='col-3'></div>
-  <div className='col-6'>
-  <span className='searchbox'>
-    <h2>How can we help you ?</h2>
-    <pre></pre>
-   <input class="fontAwesome" placeholder=' &#xF002;  Search Your Queries'>
-
-</input>
-</span>
-<pre></pre>
-<div className='faq' ><a className='faq' href='#'>FAQ's</a></div>
-
-<pre></pre><br></br>
-  </div>
-
-</div>
- 
- 
-
-
-    </div>
- );
-
+</nav></div>);
 }
-export default Header;
+export default Header2();

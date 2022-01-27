@@ -1,14 +1,14 @@
 .social{
 justify-content: center;
-background: rgb(240, 248, 255);  
+background: rgb(25, 25, 25);  
 }
 
 .contact{
-    color: black; font-size: 15px;
+    color: rgb(253, 253, 253); font-size: 15px;
 }
 .copyright{
     color: white; 
-    background-color: rgb(125, 125, 125);
+    background-color:orangered;
      text-align: center;
 }
 .contcontact{

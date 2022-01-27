@@ -19,17 +19,49 @@
     color:rgb(4, 84, 233);
     font-weight: 700;
   }
+  .env{
+    text-align: end;
+  }
+  .bi-envelope-open-fill{
+    font-size: 80px !important;
+    color: rgb(171, 171, 171) !important;
+  }
+  .contact2{
+    text-align: left;
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(61, 60, 60);
+  }
   
-  
-  
-  
-  
- 
-  
-  
-  
-  
-  
-  .bi-person-fill{
+  .contact2content{
+    color: rgb(106, 106, 106);
+    font-size: 25px;
+    font-weight: lighter;
+  }
+  .fg{
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  }
+ .bi-person-fill{
     font-size: 15px !important;
+  }
+  .bi-book{
+    font-size: 55px !important;
+    color: gray !important;
+ 
+  }
+  .book{
+    text-align: end !important;
+  }
+  .topics{
+    font-size: 30px;
+    
+  }
+  .contactcontainer{
+    box-shadow: 1px 1px 15px 3px #cbcbcb;
+   padding-top: 40px;
+  padding-bottom: 40px;
+    border-radius: 10px;
+    
   }

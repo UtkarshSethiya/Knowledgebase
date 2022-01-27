@@ -2,11 +2,21 @@
 .fontAwesome{ font-family: 'Helvetica', FontAwesome, sans-serif; }
 
 .main{
-    background-color: rgb(255, 248, 248) !important;
+   
+    background-image: url('images/headerimage.jfif');
+   background-repeat: no-repeat;
+   background-size: cover;
+   
 }
 .navbar-brand{
   color: black !important;
   font-weight: 400 !important;
+}
+.home{
+  color: white !important;
+}
+.home:hover{
+  color: rgb(4, 104, 198) !important;
 }
 input{
   padding: 10px;
@@ -52,10 +62,11 @@ outline:  rgb(70, 130, 194);
 }
 h2{
   font-weight: 600;
-  color: rgb(0, 89, 255);
+  color: rgb(255, 255, 255) !important;
 }
 .faq{
   text-align: center;
+  color: white !important;
  
 }
 

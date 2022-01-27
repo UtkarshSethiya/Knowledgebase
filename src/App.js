@@ -5,7 +5,13 @@ import Request from './components/request';
 import Calculator from './components/calculator';
 import Home from './components/home';
 import Footer from './components/footer';
-import Content from './components/maincontent';
+import Medium from './components/calculator_medium';
+import Small from './components/calculator_small';
+import Custom from './components/calculator_custom';
+import ScrollToTop from './components/scroll';
+
+
+
 
 import {
   BrowserRouter,
@@ -17,25 +23,27 @@ import {
 
 function App() {
   
- 
 
   return (
     <div className="App">
 
 
-<Header/>
 
-<br></br><br></br><br></br>
-<h1> <span id='biz'>Biz</span><span id='connect'>Connect</span> Knowledgebase</h1>
-<br></br><br></br><br></br>
 
+
+<ScrollToTop>
 <Routes>
 
       <Route path="home"  element={<Home/>}  />
       <Route path="calculator" element={<Calculator />} />
      <Route path="request" element={<Request/>} />
+     <Route path="calculator_medium"  element={<Medium/>}  />
+     <Route path="calculator_small"  element={<Small/>}  />
+     <Route path="calculator_custom"  element={<Custom/>}  />
+    
+    
     </Routes>
-
+    </ScrollToTop>
    
     <Footer/>
 
