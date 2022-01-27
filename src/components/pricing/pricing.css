@@ -1,0 +1,199 @@
+.billcontainer{
+    display: flex; 
+    justify-content: center;
+}
+.billcontainer_span{
+    font-size: 24px; 
+    text-align: center;
+     width: 15px !important;
+}
+   .currency{
+        padding-right: 8px;
+        font-weight: 500;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .colchild{
+        padding-top: 35px; padding-left: 15px;
+    }
+    .childheading{
+        font-size: 22px;
+        font-weight: 700;
+        
+    }
+    .childcontent{
+        font-weight: 600;
+        padding-right: 30px;
+    }
+    .childcontentlast{
+        font-weight: 600;
+        
+    }
+    .childprice{
+        padding-right: 30px; 
+        padding-top: 9px;
+    }
+    .span:hover{
+        background-color:rgb(4, 84, 233); 
+        color: white !important;
+        cursor: pointer;
+    }
+    .spanlast{
+     
+        border: 2px solid rgba(245,135,50,255); border-radius: 5px; font-weight: 500; color:rgba(245,135,50,255); padding: 8px; padding-left: 16px; padding-right:16px;
+    }
+    .spanlast:hover{
+        background-color: rgba(245,135,50,255);
+        color: white !important;
+        cursor: pointer;
+    }
+    .no_of_sing{
+        text-align: center;
+        font-weight: 600;
+        padding: 10px;
+        color: rgb(73, 73, 73);
+        font-size: 15px;
+    }
+.col-md-12{
+    color: rgb(50, 50, 50);
+}
+
+.section{
+    background-color:rgba(250,250,250,255); 
+    padding: 10px; font-size: 20px; 
+    font-weight: 700;
+}
+
+.bi-check{
+    font-size: 35px !important;
+    
+}
+.bi-x-lg{
+    font-size: 20px !important;
+    font-weight: 800 !important;
+}
+.bi-cup-straw{
+    font-size: 30px !important;
+    color: orangered; 
+}
+
+.cost_section{
+    background-color: rgb(231, 243, 253);
+}
+
+.coffe{
+    text-align: center;
+    padding: 15px;
+    font-weight: 700;
+    
+}
+
+#monthly{
+    text-align: center; 
+    font-size: 37px ;
+}
+#twentypercent{
+    text-align:center; 
+    color:rgba(245,135,50,255);
+}
+#flexSwitchCheckDefault{
+    cursor: pointer;
+    font-size: 25px !important;
+}
+#billanually{
+    font-size: 20px; 
+    font-weight: 500;
+}
+#billanuallychild{
+    font-size: 20px;
+     font-weight: 500;
+      color:rgba(245,135,50,255) ;
+}
+#facont{
+    border-radius: 20px;
+    box-shadow: 1px 1px 15px 3px #cbcbcb;
+}
+#pricecont{
+    background-color: rgba(249,250,250,255); 
+    justify-content: center;
+}
+#Features{
+    text-align: center; 
+    padding-top: 150px;
+    font-size: 40px;
+    color: black !important;
+}
+.bi-star-fill{
+    font-size: 40px !important;
+}
+.mug{
+    justify-content: center;
+}
+.tester{
+    background-color:rgba(249,250,250,255) ; 
+    justify-content:center;
+}
+.span{
+    border: 2px solid rgb(4, 84, 233); border-radius: 5px; font-weight: 500; color: rgb(4, 84, 233) ; padding: 8px; padding-left: 16px; padding-right:16px;
+}
+.perfectx{
+    display: inline-flex; justify-content: space-between;
+}
+#url{
+    width: 200px;
+}
+#cost2{
+    padding: 10px; font-size: 20px; font-weight: 700;
+}
+@media screen and (max-width: 992px){
+    .heading{
+        font-size: 12px;
+        padding:8px;
+        text-align: center;
+        font-weight: 900 ;
+    }
+    .coffe{
+        border: 2px soild black;
+    }
+    .pricerow{
+        display: none;
+       
+    }
+    
+}
+@media screen and (min-width: 993px) and (max-width:4000px){
+    .heading{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){
+    .responsive{
+        padding-top: 24px;
+    }
+}
+@media screen and (min-width: 990px) and (max-width: 1200px){
+    .span{
+        font-size: 10px;
+      
+    }
+    .spanlast{
+        font-size: 12px;
+    }
+}
+
+
+
+    @media screen and (max-width: 770px){
+        .no_of_sing{
+            font-size: 8px;
+            font-weight: 700;
+        }
+        .bi-check{
+            font-size: 15px !important;
+        }
+    }
+
+   
+    

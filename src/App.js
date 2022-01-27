@@ -9,7 +9,7 @@ import Medium from './components/calculator_medium';
 import Small from './components/calculator_small';
 import Custom from './components/calculator_custom';
 import ScrollToTop from './components/scroll';
-
+import Pricing from './components/pricing/pricing';
 
 
 
@@ -40,6 +40,7 @@ function App() {
      <Route path="calculator_medium"  element={<Medium/>}  />
      <Route path="calculator_small"  element={<Small/>}  />
      <Route path="calculator_custom"  element={<Custom/>}  />
+     <Route path="/pricing/pricing"  element={<Pricing/>}  />
     
     
     </Routes>

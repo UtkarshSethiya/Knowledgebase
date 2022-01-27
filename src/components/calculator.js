@@ -13,18 +13,7 @@ function Calculator(){
     
  
 const[no,setno]=useState(1);
-const[attend,setattend]=useState(200);
-const[exhibitor,setexhibitor]=useState(3);
-const[customhall,setcustomhall]=useState(2);
-const[custombooth,setcustombooth]=useState(1);
-const[whitelabel,setwhitelabel]=useState(0);
-const[customlanding,setcustomlanding]=useState(0);
-const[customlobby,setcustomlobby]=useState(0);
-const[three,setthree]=useState(0);
-const[auditorium,setauditorium]=useState(0);
-const[games,setgames]=useState(1);
-const[booth,setbooth]=useState(0);
-const[hour,sethour]=useState(0);
+
 
 
 
@@ -83,24 +72,13 @@ function thousand(){
 
 /*Cost of all features*/
 
-let attendcost=((attend-200)/25)*20;
-let exhibitorcost=(exhibitor-3)*100;
-let customhallcost=(customhall-2)*100;
-let customboothcost=(custombooth)*100;
-let whitelabelcost=whitelabel;
-let customlandingcost=(customlanding)*200;
-let threecost=three;
-let customlobbycost=(customlobby)*200;
-let auditoriumcost=(auditorium)*200;
-let gamescost=(games-1)*50;
-let boothcost=booth*100;
-let hourcost=(hour)*75
+
 
 
 
 
 /*let total=( parseInt((attend-200)/25)*20) + parseInt((exhibitor-3)*100)+ parseInt((customhall)*100) + parseInt((custombooth)*100)+  parseInt(whitelabel )+ parseInt((customlanding)*200)+ parseInt(three)+ parseInt((customlobby)*200)+parseInt((auditorium)*200)+ parseInt((games-1)*50)+ parseInt(booth*100)+  parseInt((hour)*75);*/
-let total=attendcost+exhibitorcost +customhallcost+customboothcost+whitelabelcost+customlandingcost+threecost+customlobbycost+auditoriumcost+gamescost+boothcost+hourcost;   
+
 
 
 return(
@@ -129,7 +107,7 @@ return(
   </div>
 </nav></div>
     
-        <div className='quest'><a href='https://www.google.com/'><img src={quest} height='40px' width='40px'></img></a></div>
+        <div className='quest'><Link to='/pricing/pricing'><img src={quest} height='40px' width='40px'></img></Link></div>
   
        
 

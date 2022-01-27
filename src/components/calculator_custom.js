@@ -200,8 +200,7 @@ function Custom(){
     
   </div>
 </nav></div>
-            <div className='quest'><a href='https://www.google.com/'><img src={quest} height='40px' width='40px'></img></a></div>
-      
+<div className='quest'><Link to='/pricing/pricing'><img src={quest} height='40px' width='40px'></img></Link></div>
            
     
                 
