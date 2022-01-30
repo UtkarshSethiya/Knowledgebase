@@ -1,7 +1,7 @@
 import logo from './images/logo.png';
 import './header.css';
 import { Link } from "react-router-dom";
-import Calculator from './calculator';
+
 
 function Header(){
 
@@ -21,8 +21,9 @@ return(<div className='row main bg-light'>
     <Link className="btn btn2 btn-outline-light"to="/request">Submit a Request</Link>
     <Link className="btn btn2 btn-outline-light" to="/pricing/pricing"><i class="bi bi-cash-coin"></i> Pricing</Link>
    <Link  className="btn btn2 btn-outline-light" to="/calculator"><i class="bi bi-calculator-fill"></i> Calculator</Link>
-    
+ 
     <button className="btn btn1 " type="submit">Subscribe</button>
+  
     </div>
     
   </div>

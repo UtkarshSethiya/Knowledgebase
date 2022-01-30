@@ -39,8 +39,8 @@ outline:  rgb(70, 130, 194);
 }
 
 .btn1{
-    background-color: orangered;
-  color: white;
+    background-color: orangered !important;
+  color: white !important;
   font-weight: 600;
   border-radius: 5px;
   padding: 8px;

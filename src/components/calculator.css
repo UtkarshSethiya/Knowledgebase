@@ -15,6 +15,9 @@
 
     
 }
+#three{
+    font-size: 30px !important;
+}
 .total{  color: rgb(0, 83, 238) !important;
  }
 .step{
@@ -97,7 +100,24 @@ input[type="range"]::-webkit-slider-thumb {
 #custom{
     display: none;
 }
-
+.infotag{
+    position: absolute;
+    bottom: 0%;
+}
+.back{
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(39, 39, 39) !important;
+    margin-left: 30px;
+}
+.poper{
+    border: none;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.tippy{
+    font-size: 12px !important;
+}
 
 
 /* <div className="  row step ">   <pre></pre>

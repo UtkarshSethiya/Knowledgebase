@@ -124,7 +124,7 @@ function Pricing(){
     
         <div class="row "  >
             <div class="col-12 section" >
-                <i class="bi bi-person-video3"></i>  Event and Attandees 
+                <i class="bi bi-person-video3"></i>  Event and Attendees 
             </div>
           
         </div>

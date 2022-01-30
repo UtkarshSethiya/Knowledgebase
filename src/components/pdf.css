@@ -1,0 +1,55 @@
+.features{
+    text-align: center;
+    border: 1px solid rgb(169, 169, 169);
+    background-color: rgb(245, 252, 255);
+
+font-size: 13px;
+}
+
+.total2{
+    font-size: 18px;
+    color: rgb(0, 60, 255);
+    font-weight: 700;
+}
+.head{text-align: center;
+    color: black !important;
+}
+.logo{
+    text-align: start;
+    margin:10px;
+}
+.top{
+    text-align: center;
+    border: 1px solid rgb(169, 169, 169);
+    padding: 5px;
+    background-color: #ff7b42;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.row{
+    margin-bottom: 2px;
+}
+.adress{
+    margin-left: 10px;
+    font-size: 14px;
+}
+#qotation{
+   display: none;
+}
+.qotationbutton{
+    border: 1px solid orangered;
+    padding: 8px;
+color: orangered;
+background-color: white;
+    font-weight: 500;
+    border-radius: 6px;
+}
+.qotationbutton:hover{
+    background-color: orangered;
+    color: white;
+}
+#spiner{
+    display: none;
+}

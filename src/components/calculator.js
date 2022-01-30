@@ -4,13 +4,15 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import quest from './images/quest.png';
 import logo from './images/logo.png';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 
   
   
 
 function Calculator(){
-    
+
  
 const[no,setno]=useState(1);
 
@@ -73,10 +75,6 @@ function thousand(){
 /*Cost of all features*/
 
 
-
-
-
-
 /*let total=( parseInt((attend-200)/25)*20) + parseInt((exhibitor-3)*100)+ parseInt((customhall)*100) + parseInt((custombooth)*100)+  parseInt(whitelabel )+ parseInt((customlanding)*200)+ parseInt(three)+ parseInt((customlobby)*200)+parseInt((auditorium)*200)+ parseInt((games-1)*50)+ parseInt(booth*100)+  parseInt((hour)*75);*/
 
 
@@ -85,6 +83,7 @@ return(
 
    
         <div className="row "> 
+       
         <div className='row  bg-dark'>
 <nav class="navbar navbar-expand-lg navbar-light ">
   <div class="container-fluid row">
@@ -125,16 +124,24 @@ return(
             
             
             <div className="col-md-10 calcontainer">
-            
+    
 
+
+  
             <div className="row step ">
            <h3>Step1 : Customize Your Pricing</h3>
-           <pre></pre>
+           <pre></pre> <pre></pre> <pre></pre>
            
-           <h5>Number of Events <a title='Select number of Events required'><i class="bi bi-info-circle-fill"></i></a></h5>
-                    <div className='col-6 ' >
+           <h5 >Number of Events  <Tippy className='tippy' content="Select number of Events required"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy></h5>
+          
+
+                    <div className='col-6 ' > 
                    
-                    <label for="customRange1" class="form-label">Select the number of Events</label>
+                    <label for="customRange1" className="form-label">Select the number of Events</label>
+                    
+
+      
+               
                     <pre></pre>
                     <div className='row'>
                     <span className='col-1'>1</span>
@@ -157,9 +164,13 @@ return(
 
             <div className="row step ">
          
-            <h5>Date <a title='Select your first event date'><i class="bi bi-info-circle-fill"></i></a> </h5>
+            <h5>Date <Tippy className='tippy' content="Select your first event date"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy> </h5>
             <div className='col-6'>
+
               
+                
+
+             
                 
                 <p>Define Your First Event Date</p>
             </div>
@@ -172,24 +183,24 @@ return(
 
             <div className="row step  ">
                 <h3>Step 2 : Choose Your Plan </h3>
-                <pre></pre>
-                <h5>Select no of Attendees to get your plan <a title='Give us the number of Attendes in the event '><i class="bi bi-info-circle-fill"></i></a></h5>
+                <pre></pre> <pre></pre> <pre></pre>
+                <h5>Select no of Attendees to get your plan <Tippy className='tippy' content="Give us the number of Attendes in the event"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy></h5>
                 <div className='row' ><pre></pre>
-                 <div class="form-check col-3">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onClick={twohundred} ></input>
-  <label class="form-check-label" for="flexRadioDefault1">
+                 <div className="form-check col-3">
+  <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onClick={twohundred} ></input>
+  <label className="form-check-label" for="flexRadioDefault1">
     200 to 500 
   </label>
 </div>
 <div class="form-check col-3">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={fivehundred} ></input>
-  <label class="form-check-label" for="flexRadioDefault2">
+  <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={fivehundred} ></input>
+  <label className="form-check-label" for="flexRadioDefault2">
     500 to 1000 
   </label>
 </div>
 <div class="form-check col-3">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" onClick={thousand} ></input>
-  <label class="form-check-label" for="flexRadioDefault2">
+  <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" onClick={thousand} ></input>
+  <label className="form-check-label" for="flexRadioDefault2">
   1000+ 
   </label>
 </div>

@@ -4,12 +4,15 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import quest from './images/quest.png';
 import logo from './images/logo.png';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+
 function Small(){
     const[no,setno]=useState(1);
     const[attend,setattend]=useState(200);
     const[exhibitor,setexhibitor]=useState(3);
     const[customhall,setcustomhall]=useState(2);
-    const[custombooth,setcustombooth]=useState(1);
+    const[custombooth,setcustombooth]=useState(0);
     const[whitelabel,setwhitelabel]=useState(0);
     const[customlanding,setcustomlanding]=useState(0);
     const[customlobby,setcustomlobby]=useState(0);
@@ -174,7 +177,7 @@ function Small(){
     
     
     /*let total=( parseInt((attend-200)/25)*20) + parseInt((exhibitor-3)*100)+ parseInt((customhall)*100) + parseInt((custombooth)*100)+  parseInt(whitelabel )+ parseInt((customlanding)*200)+ parseInt(three)+ parseInt((customlobby)*200)+parseInt((auditorium)*200)+ parseInt((games-1)*50)+ parseInt(booth*100)+  parseInt((hour)*75);*/
-    let total=attendcost+exhibitorcost +customhallcost+customboothcost+whitelabelcost+customlandingcost+threecost+customlobbycost+auditoriumcost+gamescost+boothcost+hourcost;   
+    let total=700+attendcost+exhibitorcost +customhallcost+customboothcost+whitelabelcost+customlandingcost+threecost+customlobbycost+auditoriumcost+gamescost+boothcost+hourcost;   
     
     
     return(
@@ -206,7 +209,7 @@ function Small(){
     
                 
                 <pre></pre>
-                <h1>Calculator</h1>
+                <h1>Calculator</h1><div className='col-1 '><Link to='/calculator' className='back'><i class="bi bi-arrow-left-square"></i></Link></div>
                 <pre></pre> <pre></pre> <pre></pre>
                 <div className="col-md-1"></div>
                 
@@ -221,10 +224,11 @@ function Small(){
                 
     
                 <div className="row step  ">
+                    
                     <p id='plantype'>Small Plan</p>
                     <h3>Step 3 : Select your volume </h3>
                     <pre></pre>
-                    <h5>Attendees Volume <a title='Give us the number of Attendes in the event '><i class="bi bi-info-circle-fill"></i></a></h5>
+                    <h5 >Attendees Volume <Tippy className='tippy' content="Give us the number of Attendes in the event"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy> </h5>
                    
                    <div id='plancont'><h6   id='plan'></h6> <Link id='medium' to='/calculator_medium' className='  btn btn-outline-primary btn2'>Continue</Link></div>
                    
@@ -232,7 +236,7 @@ function Small(){
                     
                     <div className="  row step ">
                             
-                            <p>Define the volume of attendees per month for all your events <a title='For Small Plan Attendes upto 200 are free beyond that, every additional 1-25 users $20 wil be charged    '><i class="bi bi-info-circle-fill"></i></a> </p>
+                            <p>Define the volume of attendees per month for all your events <Tippy className='tippy' content="For Small Plan Attendes upto 200 are free beyond that, every additional 1-25 users $20 wil be charged "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>  </p>
                         <span className='col-1 zero'>200</span>
                         <div className='col-5'><input type="range" min="200" max="500" step="25" value={attend} onkeydown="return false" onChange={attendenumber}  class="form-range  " id="customRange1"/></div>
                         <span className='col-1'>500</span>
@@ -246,8 +250,8 @@ function Small(){
                     <pre></pre> <pre></pre>
                     <h5>Exhibitors Volume </h5>
                     <div className='col-12'>
-                     
-                     <p>Extra Booth($100/booth) <a title='For Small plan Booths upto 3 are free above 3 you will be charged'><i class="bi bi-info-circle-fill"></i></a></p>
+                     <pre><pre></pre></pre><pre></pre><pre></pre>
+                     <p>Extra Booth($100/booth) <Tippy className='tippy' content="For Small plan Booths upto 3 are free above 3 you will be charged "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy> </p>
                        <div className='row'>
                       
                         <div className='col-1  zero'>3</div>
@@ -260,7 +264,7 @@ function Small(){
                     </div>
                        <pre></pre>
                         
-                        <p>Buy Custom Hall Template ($100/hall) <a title='For medium plan Halls upto 2 are free above 2 you will be charged'><i class="bi bi-info-circle-fill"></i></a> </p>
+                        <p>Buy Custom Hall Template ($100/hall) <Tippy className='tippy' content="For Small plan Halls upto 2 are free above 2 you will be charged "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>  </p>
                         <span className='col-1 zero'>2</span>
                         <div className='col-5'><input type="range" value={customhall} min="2" max="50" step="1" onChange={customhallnumber}  class="form-range  " id="customRange1"/></div>
                         <span className='col-1'>50</span>
@@ -272,13 +276,13 @@ function Small(){
     
                         <pre></pre>
                         
-                        <p>Buy Custom Booth Template ($100/template) <a title='Select no of custom booths'><i class="bi bi-info-circle-fill"></i></a> </p>
-                        <span className='col-1 zero'>1</span>
-                        <div className='col-5'><input type="range" min="1" max="50" step="1" value={custombooth} onChange={customboothnumber}  class="form-range  " id="customRange1"/></div>
+                        <p>Buy Custom Booth Template ($100/template)  <Tippy className='tippy' content="Select no of custom booths "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>  </p>
+                        <span className='col-1 zero'>0</span>
+                        <div className='col-5'><input type="range" min="0" max="50" step="1" value={custombooth} onChange={customboothnumber}  class="form-range  " id="customRange1"/></div>
                         <span className='col-1'>50</span>
                         <div className='col-2'></div>
                         <div className='col-2'>
-                        <input className='value'  type='number'  value={custombooth} min="1" max="50" step="1" onChange={customboothnumber}   ></input><pre></pre>
+                        <input className='value'  type='number'  value={custombooth} min="0" max="50" step="1" onChange={customboothnumber}   ></input><pre></pre>
                         <h6>Cost: ${customboothcost}</h6>
                         </div>
                             
@@ -294,7 +298,7 @@ function Small(){
                     <pre></pre><pre></pre>
                       
                        <div className='col   '>
-                           <h5>White Label ($250/event) <a title='Depending on no of events white label will be charged'><i class="bi bi-info-circle-fill"></i></a></h5>
+                           <h5>White Label ($250/event) <Tippy className='tippy' content="Depending on no of events white label will be charged"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy> </h5>
                            <p>
                            Showcase your brand! Create a white-label platform using your brand name, font, colours etc for an exclusive experience.
                            </p>
@@ -309,7 +313,7 @@ function Small(){
     
                         <div className="  row step ">
                             <h3> Step 5: Landing/Event Microsite</h3><pre></pre><pre></pre>
-                            <p>Buy Custom Landing Template ($200/template) <a title='You will be charged $200 per template '><i class="bi bi-info-circle-fill"></i></a> </p>
+                            <p>Buy Custom Landing Template ($200/template) <Tippy className='tippy' content="You will be charged $200 per template"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy> </p>
                         <span className='col-1 zero'>0</span>
                         <div className='col-5'><input type="range" value={customlanding} min="0" max="50" step="1" onChange={customlandingnumber}  class="form-range  " id="customRange1"/></div>
                         <span className='col-1'>50</span>
@@ -321,12 +325,12 @@ function Small(){
     
                              <div className="  row step ">
                             <h3>Step 6: 3D and 360° Walkthrus  </h3>
-                            <pre></pre>
-                            <div className='col'><h5>Branded Lobby Walkthrough ($300/event) <a title='Depending on no of events 3D and 360° Walkthrus will be charged Max to 3 doors'><i class="bi bi-info-circle-fill"></i></a> </h5></div>
+                            <pre></pre><pre></pre><pre></pre>
+                            <div className='col'><h5>Branded Lobby Walkthrough ($300/event) <Tippy className='tippy' content="Depending on no of events 3D and 360° Walkthrus will be charged Max to 3 doors"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy> </h5></div>
                      
                     
-                        <div className='col-3'>
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked  " id="three" onChange={setthreenumber}></input><pre></pre>
+                        <div className='col-3'><input class="form-check-input" type="checkbox" value="" id="three" onChange={setthreenumber}></input>
+                        <pre></pre>
                         <h6>Cost: ${threecost}</h6></div>
                              </div>
     
@@ -334,7 +338,7 @@ function Small(){
     
                              <div className="  row step ">
                             <h3>Step 7: Lobby</h3><pre></pre>
-                            <p>Buy Custom Lobby Template ($200/template) <a title='You will be charged $200 per template '><i class="bi bi-info-circle-fill"></i></a>  </p>
+                            <p>Buy Custom Lobby Template ($200/template) <Tippy className='tippy' content=" You will be charged $200 per template"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>   </p>
                         <span className='col-1 zero'>0</span>
                         <div className='col-5'><input type="range" value={customlobby} min="0" max="50" step="1" onChange={customlobbynumber}  class="form-range  " id="customRange1"/></div>
                         <span className='col-1'>50</span>
@@ -346,8 +350,8 @@ function Small(){
     
     
                              <div className="  row step ">
-                            <h3>Step 8: Auditorium </h3><pre></pre>
-                            <p>Buy Custom Auditorium Template ($200/template) <a title='You will be charged $200 per template '><i class="bi bi-info-circle-fill"></i></a></p>
+                            <h3>Step 8: Auditorium </h3><pre></pre><pre></pre><pre></pre>
+                            <p>Buy Custom Auditorium Template ($200/template) <Tippy className='tippy' content=" You will be charged $200 per template"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy></p>
                         <span className='col-1 zero'>0</span>
                         <div className='col-5'><input type="range"   value={auditorium} min="0" max="50" step="1" onChange={auditoriumnumber}  class="form-range  " id="customRange1"/></div>
                         <span className='col-1'>50</span>
@@ -360,7 +364,8 @@ function Small(){
     
                              <div className="  row step ">
                             <h3>Step 9: Engagement </h3>
-                            <p>Games with Leaderboard ($50/game) <a title='For small plan games upto 1 are free above 1 you will be charged'><i class="bi bi-info-circle-fill"></i></a> </p>
+                            <pre></pre><pre></pre><pre></pre>
+                            <p>Games with Leaderboard ($50/game) <Tippy className='tippy' content="For small plan games upto 1 are free above 1 you will be charged $50 "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>  </p>
                             
                             <span className='col-1 zero'>1</span>
                         <div className='col-5'><input type="range" value={games } min="1" max="50" step="1" onChange={gamesnumber}  class="form-range  " id="customRange1"/></div>
@@ -371,7 +376,7 @@ function Small(){
                         <h6>Cost: ${gamescost}</h6></div>
     
      
-                   <p>Photo Booth ($100/month) <a title='You will be charged $100 per month '><i class="bi bi-info-circle-fill"></i></a> </p>
+                   <p>Photo Booth ($100/month) <Tippy className='tippy' content="You will be charged $100 per month"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>  </p>
                         <span className='col-1 zero'>0</span>
                         <div className='col-5'><input type="range" value={booth} min="0" max="10" step="1" onChange={boothnumber}  class="form-range  " id="customRange1"/></div>
                         <span className='col-1'>10</span>
@@ -385,8 +390,9 @@ function Small(){
     
                              <div className="  row step ">
                             <h3>Step 10: Support </h3>
-                            <p>Onboarding Executive (Tech support $75/hour) <a title='Tech Support, 1st Event Free Tech Support 
-    Post 1st Event - Per hr $ 75'><i class="bi bi-info-circle-fill"></i></a>  </p>
+                            <pre></pre> <pre></pre> <pre></pre>
+                            <p>Onboarding Executive (Tech support $75/hour) <Tippy className='tippy' content=" Tech Support, 1st Event Free Tech Support 
+    Post 1st Event - Per hr $ 75"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>     </p>
                         <span className='col-1 zero'>0</span>
                         <div className='col-5'><input type="range" value={hour} min="0" max="50" step="1" onChange={hournumber}  class="form-range  " id="customRange1"/></div>
                         <span className='col-1'>50 hours</span>
