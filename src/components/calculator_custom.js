@@ -196,8 +196,8 @@ today = dd + '/' + mm + '/' + yyyy;
         document.getElementById('spiner').style.display='block'
         document.getElementById('qotation').style.display='block'
         document.getElementById('qotation').style.marginLeft='50px'
-        let doc = new jsPDF("landscape", 'pt', 'A4','FAST',true);
-        doc.addImage(logo, 'PNG', 0, 0, 485, 270, undefined,'FAST');
+        let doc = new jsPDF("landscape", 'pt', 'A4',true);
+        
         doc.html(document.getElementById('qotation'), {
           callback: () => {
           
@@ -475,11 +475,11 @@ today = dd + '/' + mm + '/' + yyyy;
                           </div>
                     
                    <div className='col-1'></div>
-                   <div className='col-6 ' >
+                   <div className='col-7  ' >
                     <div className='row '>
-                       <div className='col-4 top '>Features</div>
-                       <div className='col-3 top ' >Quantity</div>
-                       <div className='col-3 top '>Cost</div>
+                       <div className='col-4  top '>Features</div>
+                       <div className='col-3  top ' >Quantity</div>
+                       <div className='col-3  top '>Cost</div>
                     </div>
                     <div className='row'>
                        <div className='col-4 features'>Attendees Volume</div>
