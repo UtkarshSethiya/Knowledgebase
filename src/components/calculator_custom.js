@@ -204,8 +204,9 @@ today = dd + '/' + mm + '/' + yyyy;
             doc.save('Bizonnect_Quotation.pdf');
           }
         });
+        setTimeout(disappear,1);
         setTimeout(disapppearbutton,3000)
-       setTimeout(disappear,500);
+      
        
     }
 
@@ -467,10 +468,10 @@ today = dd + '/' + mm + '/' + yyyy;
                      <div className='row '>
                          <div className='col-2 '><img className='logo'  src={logo} height='80px' ></img>
                          
-                          <p className='adress'> #338,5th Block Rajajinagar Bangalore 560010<br></br> Email-contact@bizconnectevents.com</p></div>
+                          <p className='adress'> #338,5th Block Rajajinagar Bangalore 560010<br></br> Email-contact@bizconnectevents.com </p></div>
+                         <div className='col-4 bf'>  <p> Date: {today} <br></br> Plantype: <span className='total2'>Custom </span> </p> </div>
                           
-                          <div className='col-4 ' ></div>
-                          <div className='col-2' ><h6>Plantype: Custom</h6><p>Date: {today}</p></div>
+                        
                           </div>
                     
                    <div className='col-1'></div>

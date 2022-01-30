@@ -25,7 +25,7 @@ font-size: 13px;
     background-color: #ff7b42;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
 }
 .row{
@@ -33,10 +33,10 @@ font-size: 13px;
 }
 .adress{
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 12px;
 }
 #qotation{
-   display: none;
+  display: none;
 }
 .qotationbutton{
     border: 1px solid orangered;
@@ -52,4 +52,8 @@ background-color: white;
 }
 #spiner{
     display: none;
+}
+.bf{
+    text-align: end;
+    padding-top: 20px;
 }
