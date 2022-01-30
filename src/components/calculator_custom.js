@@ -197,7 +197,7 @@ today = dd + '/' + mm + '/' + yyyy;
         document.getElementById('qotation').style.display='block'
         document.getElementById('qotation').style.marginLeft='50px'
         let doc = new jsPDF("landscape", 'pt', 'A4',true);
-        
+       /* doc.addImage(logo, 'PNG', 0, 0, 85, 85, undefined,'FAST');*/
         doc.html(document.getElementById('qotation'), {
           callback: () => {
           
