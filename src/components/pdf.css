@@ -1,7 +1,7 @@
 .features{
     text-align: center;
-    border: 1px solid rgb(169, 169, 169);
-    background-color: rgb(245, 252, 255);
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(232, 248, 255);
 
 font-size: 13px;
 }
@@ -20,7 +20,7 @@ font-size: 13px;
 }
 .top{
     text-align: center;
-    border: 1px solid rgb(169, 169, 169);
+    border: 1px solid rgb(0, 0, 0);
     padding: 5px;
     background-color: #ff7b42;
     border-top-left-radius: 8px;
@@ -29,7 +29,7 @@ font-size: 13px;
     font-weight: 600;
 }
 .row{
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 .adress{
     margin-left: 10px;
