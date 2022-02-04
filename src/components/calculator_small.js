@@ -6,6 +6,7 @@ import quest from './images/quest.png';
 import logo from './images/logo.png';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { jsPDF } from "jspdf";
 
 function Small(){
     const[no,setno]=useState(1);
@@ -22,7 +23,13 @@ function Small(){
     const[booth,setbooth]=useState(0);
     const[hour,sethour]=useState(0);
     
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
     
+    today = dd + '/' + mm + '/' + yyyy;
+        
     
     
     
@@ -107,7 +114,7 @@ function Small(){
             setwhitelabel(0)
           };
           if(document.getElementById("flexCheckChecked").checked==true){
-           setwhitelabel(no*250);
+           setwhitelabel(1);
           }
     }
     function customlandingnumber(event){
@@ -122,7 +129,7 @@ function Small(){
             setthree(0)
           };
           if(document.getElementById("three").checked==true){
-           setthree(no*300);
+           setthree(1);
           }
     }
     function gamesnumber(event){
@@ -156,7 +163,36 @@ function Small(){
     
     /*radio button functions*/
     
+   /*Quotation function*/
+    
+   function disappear(){
+    document.getElementById('qotation').style.display='none'
+    
+}
+function disapppearbutton(){
+    document.getElementById('buttn').style.display='block'
+    document.getElementById('spiner').style.display='none'
+}
+const pdfDownload = e => {
+    
+    e.preventDefault()
+    document.getElementById('buttn').style.display='none'
+    document.getElementById('spiner').style.display='block'
+    document.getElementById('qotation').style.display='block'
+    document.getElementById('qotation').style.marginLeft='50px'
+    let doc = new jsPDF("landscape", 'pt', 'A4',true);
+    /*doc.addImage(logo, 'PNG', 0, 0, 0, 0, undefined,'FAST');*/
+    doc.html(document.getElementById('qotation'), {
+      callback: () => {
+      
+        doc.save('Bizonnect_Quotation_Small.pdf');
+      }
+    });
+    setTimeout(disappear,1);
+    setTimeout(disapppearbutton,3000)
   
+   
+}
     
     /*Cost of all features*/
     
@@ -164,9 +200,9 @@ function Small(){
     let exhibitorcost=(exhibitor-3)*100;
     let customhallcost=(customhall-2)*100;
     let customboothcost=(custombooth)*100;
-    let whitelabelcost=whitelabel;
+    let whitelabelcost=whitelabel*250;
     let customlandingcost=(customlanding)*200;
-    let threecost=three;
+    let threecost=three*300;
     let customlobbycost=(customlobby)*200;
     let auditoriumcost=(auditorium)*200;
     let gamescost=(games-1)*50;
@@ -407,10 +443,109 @@ function Small(){
                    
                              <h2 className='total'><pre></pre>Total:-${total} </h2>
                              <h5 id='message'>Great,You are eligible for Small Plan!</h5>
-                            
-                    
+                            <pre></pre>
+                             <button id='buttn' className='qotationbutton' onClick={pdfDownload}>Get My Quotation</button>
+                             <div id='spiner' class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
                 </div>
                 
+                 
+                <div id='qotation' className='row  invoice2 '>
+                   
+                   <div className='row '>
+                       <div className='col-2 '><img className='logo'  src={logo} height='80px' ></img>
+                       
+                        <p className='adress'>  Email-contact@bizconnectevents.com </p></div>
+                       <div className='col-4 bf'>  <p> Date: {today} <br></br>   Plantype: <span className='total2'>Small</span> </p> </div>
+                        
+                      
+                        </div>
+                  
+                 <div className='col-1'></div>
+                 <div className='col-7  ' >
+                  <div className='row '>
+                     <div className='col-4  top '>Features</div>
+                     <div className='col-3  top ' >Quantity</div>
+                     <div className='col-3  top '>Cost</div>
+                  </div>
+                  <div className='row'>
+                       <div className='col-4 features'>Plan Cost </div>
+                       <div className='col-3 features' >Type:Small</div>
+                       <div className='col-3 features '>$ 700</div>
+                    </div>
+                  <div className='row'>
+                     <div className='col-4 features'>Attendees Volume</div>
+                     <div className='col-3 features' >{attend}</div>
+                     <div className='col-3 features '>${attendcost}</div>
+                  </div>
+                  <div className='row'>
+                     <div className='col-4 features'>Extra Booth</div>
+                     <div className='col-3 features' >{exhibitor}</div>
+                     <div className='col-3 features'>${exhibitorcost}</div>
+                  </div>
+                  <div className='row'>
+                     <div className='col-4 features'>Custom Hall Template </div>
+                     <div className='col-3 features' >{customhall}</div>
+                     <div className='col-3 features '>${customhallcost}</div>
+                  </div>
+                  <div className='row'>
+                     <div className='col-4 features'>Custom Booth Template </div>
+                     <div className='col-3 features' >{custombooth}</div>
+                     <div className='col-3  features'>${customboothcost}</div>
+                  </div>
+                  <div className='row'>
+                     <div className='col-4 features'>White Label </div>
+                     <div className='col-3 features' >{whitelabel}</div>
+                     <div className='col-3 features '>${whitelabelcost}</div>
+                  </div>
+                  <div className='row'>
+                     <div className='col-4 features'> Custom Landing Template </div>
+                     <div className='col-3 features' >{customlanding}</div>
+                     <div className='col-3 features '>${customlandingcost}</div>
+                  </div>
+                
+                  <div className='row'>
+                     <div className='col-4 features'>   Branded Lobby Walkthrough </div>
+                     <div className='col-3 features' >{three}</div>
+                     <div className='col-3 features '>${threecost}</div>
+                  </div>
+                  <div className='row'>
+                     <div className='col-4 features'>  Custom Lobby Template </div>
+                     <div className='col-3 features' >{customlobby}</div>
+                     <div className='col-3 features '>${customlobbycost}</div>
+                  </div>
+
+                  <div className='row'>
+                     <div className='col-4 features'>  Auditorium  </div>
+                     <div className='col-3 features' >{auditorium}</div>
+                     <div className='col-3  features'>${auditoriumcost}</div>
+                  </div>
+                  <div className='row'>
+                     <div className='col-4 features'>  Games with Leaderboard  </div>
+                     <div className='col-3 features' >{games}</div>
+                     <div className='col-3 features'>${gamescost}</div>
+                  </div>
+                  <div className='row'>
+                     <div className='col-4 features'> Photo Booth   </div>
+                     <div className='col-3 features' >{booth}</div>
+                     <div className='col-3 features'>${boothcost}</div>
+                  </div>
+                  <div className='row'>
+                     <div className='col-4 features'> Onboarding Executive Support   </div>
+                     <div className='col-3 features' >{hour}</div>
+                     <div className='col-3 features'>${hourcost}</div>
+                  </div>
+                  <div className='row'>
+                      <div className='col-4'></div>
+                      <div className='col-3'></div>
+                      <div className='col-3 total2 cost'> Total- ${total}</div>
+                     
+                  </div>
+                  </div>
+                  <p >Great ,You are eligible for Small Plan !</p>
+               </div>
+ 
                 
                 
                 
@@ -418,8 +553,7 @@ function Small(){
                 
                 
                 
-                
-                <div className="col-md-"></div>
+               
                 
               
             </div>

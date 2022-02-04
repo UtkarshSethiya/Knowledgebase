@@ -22,7 +22,7 @@ function Pricing(){
     }
 
 
-    return(<div>
+    return(<div >
           <div className='row  bg-dark'>
 <nav class="navbar navbar-expand-lg navbar-light ">
   <div class="container-fluid row">
@@ -49,18 +49,20 @@ function Pricing(){
            <h1  id="monthly">Monthly Subscription Cost</h1>
            <h5 id='twentypercent' >Get 20% discount for Annual Subscription</h5>
            <pre></pre><pre></pre>
-           <div className="billcontainer"><span className="form-check form-switch billcontainer_span " ><input  onClick= {subscription} className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />  </span><span id='billanually' >Bill Annually - </span><span id='billanuallychild' >Save 20%</span> </div> 
+           <div className="billcontainer   "><span className="form-check form-switch billcontainer_span " ><input  onClick= {subscription} className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />  </span><span id='billanually' >Bill Annually - </span><span id='billanuallychild' >Save 20%</span> </div> 
            <pre></pre><pre></pre>
-           <div id='facont' className="container-sm border" >
+           <div className='parent '>
+              
+           <div id='facont' className="  container-sm border" >
     
     <div  className="row border-bottom">
         
     <div className="col-lg border-end">
-        <div className="pricerow"><div className="row coffe border-end border-bottom pricerow">.</div></div>
+        
         <div className="row coffe no_of_sing border-end border-bottom" id='pricecont' ><span className="pricerow"><img height="35px" width="40px" src={pricetag}></img> Price </span></div>
         <h2 id="Features" ><i className="bi bi-star-fill"></i>Features</h2></div>
     <div className="col-lg border-end ">
-        <div className='mug' className="row coffe border-end border-bottom" > Coffee Cup / Mug</div>
+        
         <div className='tester' className="row coffe border-end border-bottom  tester"><span><img height="35px" width="40px" src={coffee} ></img> Tester </span> </div>
         <div className="colchild ">
        
@@ -72,7 +74,7 @@ function Pricing(){
       </div>  
     </div>
     <div className="col-lg border-end">
-        <div className="row coffe border-end border-bottom mug" > Coffee Cup / Mug</div>
+       
         <div className="row coffe border-end border-bottom tester "><span><img height="35px" width="40px" src={cookie} ></img> Small </span> </div>
         <div className="colchild ">
            
@@ -85,7 +87,7 @@ function Pricing(){
         </div>
     </div>
     <div className="col-lg border-end ">
-        <div className="row coffe border-end border-bottom mug" > Coffee Cup / Mug</div>
+       
         <div className="row coffe border-end border-bottom tester "><span><img height="35px" width="40px" src={pizza}></img> Medium </span> </div>
         <div className="colchild "><p className="childheading perfectx" ><i className="bi bi-award-fill"></i> Perfect  </p>
         <p className="childcontent"> For regular events and fairs with 500 attendees per month. Expand your connections by networking with attendees that match your interests.        </p>
@@ -98,7 +100,7 @@ function Pricing(){
     </div>
     </div>
     <div className="col border-right">
-        <div className="row coffe  border-bottom mug" > Coffee Cup / Mug</div>
+    
         <div className="row coffe  border-bottom tester "><span><img height="35px" width="40px" src={fast}></img> Large </span> </div>
         <div className="colchild "><p className="childheading" ><i className="bi bi-trophy-fill"></i>  Custom   </p>
             <p className="childcontentlast mb-4"> For large events, expos and summits with 1000 attendees per month. Build the most visually striking event with moving banners and customize it in any way you want. Talk to us to explore the unlimited possibilities!             </p>
@@ -595,12 +597,7 @@ function Pricing(){
 
 
 <div class="row cost_section "  >
-    <div class="col " id='cost2'  >
-        <i class="bi bi-currency-dollar"></i>Cost</div>
-        <div class="col no_of_sing border-end border-bottom" > </div>
-    <div class="col no_of_sing border-end border-bottom" >$700</div>
-    <div class="col no_of_sing border-end border-bottom" >$1000</div>
-    <div class="col no_of_sing border-end border-bottom" >$$</div>
+   
     </div>
    
     <h6>**NOTE:<pre></pre>	
@@ -609,6 +606,7 @@ function Pricing(){
     
     </div>
 </div> 
+</div>
 </div>
    );
 }

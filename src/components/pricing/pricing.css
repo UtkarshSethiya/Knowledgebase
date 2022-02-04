@@ -145,6 +145,9 @@
 #cost2{
     padding: 10px; font-size: 20px; font-weight: 700;
 }
+.parent{
+    border-radius: 20px;
+}
 @media screen and (max-width: 992px){
     .heading{
         font-size: 12px;
@@ -196,4 +199,9 @@
     }
 
    
-    
+    /* <div class="col " id='cost2'  >
+        <i class="bi bi-currency-dollar"></i>Cost</div>
+        <div class="col no_of_sing border-end border-bottom" > </div>
+    <div class="col no_of_sing border-end border-bottom" >$700</div>
+    <div class="col no_of_sing border-end border-bottom" >$1000</div>
+    <div class="col no_of_sing border-end border-bottom" >$$</div>*/

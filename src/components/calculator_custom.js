@@ -12,7 +12,7 @@ import { jsPDF } from "jspdf";
 
 function Custom(){
     const[no,setno]=useState(1);
-    const[attend,setattend]=useState(1000);
+    const[attend,setattend]=useState(0);
     const[exhibitor,setexhibitor]=useState(0);
     const[customhall,setcustomhall]=useState(0);
     const[custombooth,setcustombooth]=useState(0);
@@ -46,11 +46,12 @@ today = dd + '/' + mm + '/' + yyyy;
         setattend(event.target.value);
      document.getElementById("attend").addEventListener("change",function(evt){
        
-        if(document.getElementById("attend").value<1000){
-            document.getElementById("attend").value=1000;
+        if(document.getElementById("attend").value<0){
+            document.getElementById("attend").value=0;
             
            event.preventDefault();
          }
+         
          if(document.getElementById("attend").value>10000){
             document.getElementById("attend").value=10000;
             
@@ -136,8 +137,8 @@ today = dd + '/' + mm + '/' + yyyy;
     function gamesnumber(event){
         setgames(event.target.value);
         document.getElementById("game").addEventListener("change",function(evt){
-            if(document.getElementById("game").value<=3){
-                document.getElementById("game").value=3;
+            if(document.getElementById("game").value<0){
+                document.getElementById("game").value=0;
                 customhallcost=0;
                event.preventDefault();
              }
@@ -168,7 +169,7 @@ today = dd + '/' + mm + '/' + yyyy;
     
     /*Cost of all features*/
     
-    let attendcost=((attend-1000)/25)*10;
+    let attendcost=((attend)/25)*15;
     let exhibitorcost=(exhibitor)*100;
     let customhallcost=(customhall)*100;
     let customboothcost=(custombooth)*100;
@@ -180,6 +181,7 @@ today = dd + '/' + mm + '/' + yyyy;
     let gamescost=(games)*50;
     let boothcost=booth*100;
     let hourcost=(hour)*75
+    /*Quotation function*/
     
     function disappear(){
         document.getElementById('qotation').style.display='none'
@@ -201,7 +203,7 @@ today = dd + '/' + mm + '/' + yyyy;
         doc.html(document.getElementById('qotation'), {
           callback: () => {
           
-            doc.save('Bizonnect_Quotation.pdf');
+            doc.save('Bizonnect_Quotation_Custom.pdf');
           }
         });
         setTimeout(disappear,1);
@@ -273,19 +275,19 @@ today = dd + '/' + mm + '/' + yyyy;
                     
                     <div className="  row step ">
                             
-                            <p>Define the volume of attendees per month for all your events <Tippy className='tippy' content="For Custom Plan Attendes upto 1000 are free beyond that, every additional 1-25 users $10 wil be charged "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>  </p>
-                        <span className='col-1 zero'>1000</span>
-                        <div className='col-5'><input type="range" min="1000" max="10000" step="25" value={attend} onkeydown="return false" onChange={attendenumber}  class="form-range  " id="customRange1"/></div>
+                            <p>Define the volume of attendees per month for all your events <Tippy className='tippy' content="For Custom Plan  every additional 1-25 users $15 wil be charged "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>  </p>
+                        <span className='col-1 zero'>0</span>
+                        <div className='col-5'><input type="range" min="0" max="10000" step="25" value={attend} onkeydown="return false" onChange={attendenumber}  class="form-range  " id="customRange1"/></div>
                         <span className='col-1'>10000</span>
                         <div className='col-2'></div>
                         <div className='col-2'>
-                        <input className='value' id='attend'  type='number'min="1000" max="10000" step="25" value={attend} onkeydown="return false" onChange={attendenumber} ></input><pre></pre>
+                        <input className='value' id='attend'  type='number'min="0" max="10000" step="25" value={attend} onkeydown="return false" onChange={attendenumber} ></input><pre></pre>
                         <h6>Cost: ${attendcost}</h6></div>
                              </div>
                      
                     <div className="row step  ">
-                    <pre></pre> <pre></pre>
-                    <h5>Exhibitors Volume </h5><pre></pre><pre></pre><pre></pre>
+                    
+                    <h5>Exhibitors Volume </h5><pre></pre>
                     <div className='col-12'>
                      
                      <p>Extra Booth($100/booth) <Tippy className='tippy' content=" For Custom plan you will be charged $100 per booth"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy> </p>
@@ -330,10 +332,9 @@ today = dd + '/' + mm + '/' + yyyy;
                     
                     </div>
     
-                    <div className="row step "><pre></pre>
+                    <div className="row step ">
                     <h3>Step 4 : Select your Module</h3>
-                    <pre></pre><pre></pre>
-                       
+                    <pre></pre>
                        <div className='col-9   '>
                            <h5>White Label ($250/event)  <Tippy className='tippy' content=" Depending on no of events white label will be charged"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>   </h5>
                            <p>
@@ -361,7 +362,7 @@ today = dd + '/' + mm + '/' + yyyy;
                              </div>
     
                              <div className="  row step ">
-                            <h3>Step 6: 3D and 360° Walkthrus  </h3><pre></pre><pre></pre><pre></pre>
+                            <h3>Step 6: 3D and 360° Walkthrus  </h3><pre></pre>
                             <pre></pre>
                             <div className='col-9'><p>Branded Lobby Walkthrough ($300/event) <Tippy className='tippy' content=" Depending on no of events 3D and 360° Walkthrus will be charged Max to 3 doors "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>      </p></div>
                        
@@ -373,7 +374,7 @@ today = dd + '/' + mm + '/' + yyyy;
     
     
                              <div className="  row step ">
-                            <h3>Step 7: Lobby</h3><pre></pre><pre></pre><pre></pre>
+                            <h3>Step 7: Lobby</h3><pre></pre>
                             <p>Buy Custom Lobby Template ($200/template)  <Tippy className='tippy' content=" You will be charged $200 per template  "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>     </p>
                         <span className='col-1 zero'>0</span>
                         <div className='col-5'><input type="range" value={customlobby} min="0" max="50" step="1" onChange={customlobbynumber}  class="form-range  " id="customRange1"/></div>
@@ -386,7 +387,7 @@ today = dd + '/' + mm + '/' + yyyy;
     
     
                              <div className="  row step ">
-                            <h3>Step 8: Auditorium </h3><pre></pre><pre></pre><pre></pre>
+                            <h3>Step 8: Auditorium </h3><pre></pre>
                             <p>Buy Custom Auditorium Template ($200/template) <Tippy className='tippy' content=" You will be charged $200 per template  "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>   </p>
                         <span className='col-1 zero'>0</span>
                         <div className='col-5'><input type="range"   value={auditorium} min="0" max="50" step="1" onChange={auditoriumnumber}  class="form-range  " id="customRange1"/></div>
@@ -399,7 +400,7 @@ today = dd + '/' + mm + '/' + yyyy;
     
     
                              <div className="  row step ">
-                            <h3>Step 9: Engagement </h3><pre></pre><pre></pre><pre></pre>
+                            <h3>Step 9: Engagement </h3><pre></pre>
                             <p>Games with Leaderboard ($50/game)  <Tippy className='tippy' content=" For Custom Plan  games are charged for $100 "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy> </p>
                             
                             <span className='col-1 zero'>0</span>
@@ -459,7 +460,7 @@ today = dd + '/' + mm + '/' + yyyy;
                 
                 
                 
-                <div className="col-md-"></div>
+                
                 
               
                 
@@ -468,7 +469,7 @@ today = dd + '/' + mm + '/' + yyyy;
                      <div className='row '>
                          <div className='col-2 '><img className='logo'  src={logo} height='80px' ></img>
                          
-                          <p className='adress'> #338,5th Block Rajajinagar Bangalore 560010<br></br> Email-contact@bizconnectevents.com </p></div>
+                          <p className='adress'>  Email-contact@bizconnectevents.com </p></div>
                          <div className='col-4 bf'>  <p> Date: {today} <br></br> Plantype: <span className='total2'>Custom </span> </p> </div>
                           
                         
@@ -481,6 +482,7 @@ today = dd + '/' + mm + '/' + yyyy;
                        <div className='col-3  top ' >Quantity</div>
                        <div className='col-3  top '>Cost</div>
                     </div>
+                   
                     <div className='row'>
                        <div className='col-4 features'>Attendees Volume</div>
                        <div className='col-3 features' >{attend}</div>
@@ -550,7 +552,7 @@ today = dd + '/' + mm + '/' + yyyy;
                        
                     </div>
                     </div>
-                  
+                    <p >Great ,You are eligible for Custom Plan.Talk with Us !</p>
                  </div>
 
 
