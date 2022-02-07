@@ -1,19 +1,37 @@
 
-.fontAwesome{ font-family: 'Helvetica', FontAwesome, sans-serif; }
 
+.fontAwesome{ font-family: 'Helvetica', FontAwesome, sans-serif; 
+  border: 2px solid rgba(255, 172, 12, 1);
+}
+
+@font-face {
+  font-family: heading;
+  src: url(fonts/Slabo13px-Regular.ttf);
+}
 .main{
    
-    background-image: url('images/headerimage.jfif');
-   background-repeat: no-repeat;
-   background-size: cover;
-   
+  background: #39B587;
+
 }
-.navbar-brand{
-  color: black !important;
+#heading{
+  color: white;
+  font-family: heading;
+  
+  font-weight: 500;
+}
+#help{ font-family: heading;
   font-weight: 400 !important;
+  color: black !important;
 }
+.topbuttons{
+  background: #86ECC6 !important;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+border-radius: 6px !important;
+font-weight: 700 !important;
+}
+
 .home{
-  color: white !important;
+  color: rgb(10, 10, 10) !important;
 }
 .home:hover{
   color: rgb(4, 104, 198) !important;
@@ -27,10 +45,16 @@ input{
 outline:  rgb(70, 130, 194);
 
 }
-::placeholder {
-  color:rgb(70, 130, 194) ;
-  opacity: 0.7; /* Firefox */
+.logo{
+  padding-left: 10px;
+  margin-left: 10px;
 }
+.navbar{
+ 
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
 .bi-cash-coin{
   font-size: 16px !important;
 }
@@ -39,11 +63,11 @@ outline:  rgb(70, 130, 194);
 }
 
 .btn1{
-    background-color: orangered !important;
-  color: white !important;
-  font-weight: 600;
-  border-radius: 5px;
+  background: #FF910F !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 6px !important;
   padding: 8px;
+  font-weight: 700 !important;
   border:none;
 }
 
@@ -69,7 +93,13 @@ h2{
   color: white !important;
  
 }
+.expolretopicsrow{
+  border-bottom: 2px solid #39B587;
+}
 
+.subscribe{
+  margin-right: 20px !important;
+}
 @media  screen and  ( max-width:1200px) {
 
   .btn1{
@@ -82,4 +112,5 @@ h2{
   .navbar-brand{
     font-size: 10px;
   }
+  
 }

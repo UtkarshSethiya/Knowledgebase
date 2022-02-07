@@ -2,7 +2,7 @@
 import './calculator.css'
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import quest from './images/quest.png';
+import calimage from './images/calimage.png';
 import logo from './images/logo.png';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
@@ -84,37 +84,36 @@ return(
    
         <div className="row "> 
        
-        <div className='row  bg-dark'>
-<nav class="navbar navbar-expand-lg navbar-light ">
-  <div class="container-fluid row">
-    <div className='col-3  logo  '>
-    <a class="navbar-brand" href="https://bizconnectevents.com/" ><img src={logo} height="50px" width="80px"></img>   </a>
+       <div class="container-fluid row navbar">
+    <div className='col-3  topleft navbar  '>
+    <a class="navbar-brand" href="https://bizconnectevents.com/" ><img className='logo' src={logo} height="62px" width="124px"></img>   </a>
     <Link class="navbar-brand home " to='/home'> Home</Link>
     
     </div>
     
-<div className='col-6   '  > </div>
+    <div className='col middle  '  > </div>
 
-    <div className='col-2  subscribe'>
-    
-    <button className="btn btn2 btn-outline-light" type="submit"><i class="bi bi-cash-coin"></i> Pricing</button>
+    <div className='col-4 navbar  subscribe'>
+    <Link className="topbuttons btn"to="/request">Submit a Request</Link>
+    <Link className="topbuttons btn" to="/pricing/pricing"><i class="bi bi-cash-coin"></i> Pricing</Link>
+ 
+ 
+    <button className="btn subscribe btn1 " type="submit">Subscribe</button>
   
-    
-    <button className="btn btn1 " type="submit">Subscribe</button>
     </div>
     
   </div>
-</nav></div>
-    
-        <div className='quest'><Link to='/pricing/pricing'><img src={quest} height='40px' width='40px'></img></Link></div>
-  
-       
 
             
-            <pre></pre>
-            <h1>Calculator</h1>
+            
+            <div className='calheading'> <pre></pre> <pre></pre><pre></pre> <pre></pre><pre></pre>
+            <h1 id='font'>Calculator</h1>
+            <pre></pre> <pre></pre><pre></pre> <pre></pre>
+            </div>
+           
             <pre></pre> <pre></pre> <pre></pre>
-            <div className="col-md-1"></div>
+            <div className='row'>
+            <div className="col-md-1 "></div>
             
               
             
@@ -123,19 +122,21 @@ return(
             
             
             
-            <div className="col-md-10 calcontainer">
+            <div className="col-md-10  ">
     
 
 
   
             <div className="row step ">
-           <h3>Step1 : Customize Your Pricing</h3>
+           
+          
+
+                    <div className='col-md-7  '  > 
+                    <div className='row'>
+                    <h3>Step1 : Customize Your Pricing <pre></pre></h3>
            <pre></pre> <pre></pre> <pre></pre>
            
            <h5 >Number of Events  <Tippy className='tippy' content="Select number of Events required"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy></h5>
-          
-
-                    <div className='col-6 ' > 
                    
                     <label for="customRange1" className="form-label">Select the number of Events</label>
                     
@@ -145,43 +146,39 @@ return(
                     <pre></pre>
                     <div className='row'>
                     <span className='col-1'>1</span>
-                    <div className='col-10'><input type="range" value={no} min="1" max="30" step="1" onChange={eventnumber}  class="form-range  " id="customRange1"/></div>
+                    <div className='col-7'><input type="range" value={no} min="1" max="30" step="1" onChange={eventnumber}  class="form-range  " id="customRange1"/></div>
                     <span className='col-1'>30</span>
-                        
+                    <div className='col-md-2' id='rangeValue'>
+                        <input id='eventno' className='value' type='number' value={no} min="1" max="30" step="1" onChange={eventnumber} ></input>
+                     </div>
                         </div>
 
                      </div>
-                     <div className='col-2'></div>
-                     <div className='col-3 '>
-                     <div id='rangeValue'>
-                        <input id='eventno' className='value' type='number' value={no} min="1" max="30" step="1" onChange={eventnumber} ></input>
-                     </div>
-                     </div>
-                     <pre></pre>   <pre></pre>   
                     
-            </div>
+                     
+                 
+                     <pre></pre>   <pre></pre>      <pre></pre>   
+                    
+       
 
 
-            <div className="row step ">
+           
          
             <h5>Date <Tippy className='tippy' content="Select your first event date"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy> </h5>
-            <div className='col-6'>
-
-              
-                
-
-             
-                
-                <p>Define Your First Event Date</p>
-            </div>
-            <div className='col-2'></div>
-            <div className='col-3'>
-                <input type='date' className='value'></input>
-            </div>
+            <div className='col-12 '>
+<div className='row'> 
+<div className='col-md-8'>
+          <p className='form-label '>Define Your First Event Date</p>
+          </div>
+           <div className='col-md-4'>
+            
+                <input type='date' className='value '></input></div>
+                </div> </div>
             <pre></pre>   <pre></pre>   
-            </div>
+            
 
-            <div className="row step  ">
+        
+           <div className='col-12 '>
                 <h3>Step 2 : Choose Your Plan </h3>
                 <pre></pre> <pre></pre> <pre></pre>
                 <h5>Select no of Attendees to get your plan <Tippy className='tippy' content="Give us the number of Attendes in the event"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy></h5>
@@ -207,25 +204,25 @@ return(
                  </div>
                  <pre></pre><pre></pre>
                <div id='plancont'><h6   id='plan'></h6><Link id='custom' to='/calculator_custom' className='  btn btn-outline-primary btn2'>Continue</Link> <Link id='small' to='/calculator_small' className='  btn btn-outline-primary btn2'>Continue</Link><Link id='medium' to='/calculator_medium' className='  btn btn-outline-primary btn2'>Continue</Link></div>
-               
+            
                 </div>
                 
               
-                        
-                
+                </div>
+                <div className='col-md-5  imgcont'><img className='calimage' src={calimage}></img></div>
+       
+               
+              
+                </div>
+            
+                </div>
+            
+            
+              
+       
+            
             </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <div className="col-md-"></div>
-            
-          
+           
         </div>
     );
 

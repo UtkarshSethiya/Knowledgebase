@@ -9,27 +9,74 @@
     font-size: 30px !important;
 }
 #plantype{
-    color: rgb(0, 83, 238);
-    font-size: 30px;
-    font-weight: 700;
+    font-family:heading;
+font-style: normal;
+font-weight: 300;
+font-size: 60px;
+    text-align: center;
 
     
+
+}
+h6{
+    color: #071BC5;
+}
+
+.inputbox{
+    width: max-content !important;
+}
+.form-label{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
 }
 #three{
     font-size: 30px !important;
 }
-.total{  color: rgb(0, 83, 238) !important;
+.total{  
+    text-align: center;
+    background: #071BC5;
+    padding: 10px;
+border-radius: 14px;
+font-family: RobotoFlex;
+font-style: normal;
+font-weight: normal;
+font-size: 58px;
+color: white;
+    
+ }
+ #message{
+    font-size: 32px;
+    font-weight: 300 !important;
+ }
+ .totalcontainer{
+     text-align: center;
  }
 .step{
     padding: 20px;
 }
+.fheading{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 33px;
+text-align: center;
+}
 h3{
-    text-align: center;
-font-weight: 700;
+    text-align: start;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 33px;
 color: rgb(30, 30, 30);
+border-bottom: 2px solid #C4C4C4;;
 }
 h5{
-    font-weight: 700 !important;  
+    font-family: Roboto;
+font-style: normal;
+font-weight: 700 !important;
+font-size: 17px;
 }
 .form-range{
     outline: none !important;
@@ -38,7 +85,7 @@ h5{
 
 input[type="range"]::-webkit-slider-runnable-track {
 
-	background-color: rgb(194, 199, 255);
+	background-color: #98A3FF;;
 	height: 8px !important;
 
 }
@@ -47,7 +94,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 input[type="range"]::-webkit-slider-thumb {
 	-webkit-appearance: none;
    
-	
+	background-color: #071BC5;;
 
 	-webkit-border-radius: 40px;
 	-moz-border-radius: 40px;
@@ -118,7 +165,32 @@ input[type="range"]::-webkit-slider-thumb {
 .tippy{
     font-size: 12px !important;
 }
-
+@font-face {
+    font-family: heading;
+    src: url(fonts/Slabo13px-Regular.ttf);
+  }
+  
+.calheading{
+    background: #39B587;
+}
+#font{
+    font-family:  heading;
+    color: white;
+font-style: normal;
+font-weight: normal;
+font-size: 50px;
+}
+.imgcont{
+   
+}
+.calimage{
+    width: 130%;
+}
+@media  screen and  ( max-width:800px){
+    .calimage{
+        width: 300px;
+    }
+}
 
 /* <div className="  row step ">   <pre></pre>
                 <h3>Step 5 : Select your Service</h3>

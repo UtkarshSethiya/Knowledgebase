@@ -1,9 +1,12 @@
 .cont_container{
-    padding: 25px;
-    margin: 10px;
+   padding-top: 5px;
+   padding-right: 5px;
     border-radius: 10px;
-    border: 1px solid rgb(201, 200, 200);
+    border: 1px solid #39B587;
+    box-sizing: border-box;
+    border-radius: 10px;
     cursor: pointer;
+   
   }
   
   .cont_container:hover{
@@ -11,32 +14,23 @@
     transition-duration: .5s;
     box-shadow: 1px 1px 15px 3px #cbcbcb;
   }
-  
-  i{
-    font-size: 25px !important;
-  }
-  h6{
-    color:rgb(4, 84, 233);
-    font-weight: 700;
-  }
-  .env{
-    text-align: end;
-  }
-  .bi-envelope-open-fill{
-    font-size: 80px !important;
-    color: rgb(171, 171, 171) !important;
-  }
-  .contact2{
-    text-align: left;
-    font-size: 30px;
-    font-weight: 600;
-    color: rgb(61, 60, 60);
+  @font-face {
+    font-family: heading;
+    src: url(fonts/Slabo13px-Regular.ttf);
   }
   
-  .contact2content{
-    color: rgb(106, 106, 106);
-    font-size: 25px;
-    font-weight: lighter;
+  .writebutton{
+    background: #39B587;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 6px;
+font-size: 25px;
+border: none;
+padding:8px;
+color: white;
+text-decoration: none;
+  }
+  .sidecontent{
+    text-align: center;
   }
   .fg{
   padding: 10px;
@@ -53,10 +47,20 @@
   }
   .book{
     text-align: end !important;
+ 
   }
+
   .topics{
-    font-size: 30px;
-    
+    font-family: heading;
+    font-style: normal;
+font-weight: normal;
+font-size: 35px;
+  }
+  .descp{
+    padding-top: 10px;
+  }
+  .explore{
+    border-right: 1px solid #000000;
   }
   .contactcontainer{
     box-shadow: 1px 1px 15px 3px #cbcbcb;
@@ -64,4 +68,18 @@
   padding-bottom: 40px;
     border-radius: 10px;
     
+  }
+  .contheading{
+    font-family: heading;
+    font-style: normal;
+font-weight: normal;
+font-size: 18px;
+  }
+  .contdetails{
+    font-size: 13px;
+  }
+  @media screen and (max-width:777px){
+    .book{
+      text-align: start !important;
+    }
   }
