@@ -1,15 +1,19 @@
 import './pricing.css';
-import free from './img/tester.png';
-import small from './img/small.png';
-import medium from './img/medium.png';
-import large from './img/large.png'
-import tag from './img/tag.png' ;
-import regular from './img/regular.png'
+
 import { Link } from "react-router-dom";
 import logo from '../images/logo.png';
-import custom from './img/custom.png'
-import feature from './img/feature.png'
+import Plan from './plan';
 
+import feature1 from "./subscription/dfdfd 1.png";
+import feature2 from "./subscription/tea-cup-png-photos 1 (2).png";
+import feature3 from "./subscription/000000 1.png";
+import feature4 from "./subscription/78788 1.png";
+import feature5 from "./subscription/66666 1.png";
+
+import facebookLike from "./subscription/Facebook Like.png";
+import graduationCup from "./subscription/Graduation Cap.png";
+import prize from "./subscription/Prize.png";
+import trophy from "./subscription/Trophy.png";
 
 function Pricing(){
 
@@ -57,20 +61,18 @@ function Pricing(){
         </div>
       </div>
 
-      <div className="d-flex px-lg-5 mx-lg-5 py-lg-3 flex-wrap">
-        <div className="card images-container-1">
-          <img
-            src={tag}
-            className="card-img-top image-1"
-            alt="Features"
-          />
-          <div className="card-body py-2">
-            <div className="d-flex align-items-center ms-3">
-              <h5 className="card-title card-title-features card-title-features-1">
+  
+
+      <div class="d-flex px-lg-5 mx-lg-5 py-lg-3 flex-wrap">
+        <div class="card images-container-1">
+          <img src={feature1} class="card-img-top image-1" alt="Features" />
+          <div class="card-body py-2">
+            <div class="d-flex align-items-center ms-3">
+              <h5 class="card-title card-title-features card-title-features-1">
                 <svg
                   width="24"
                   height="24"
-                  className="features-icon"
+                  class="features-icon"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -80,168 +82,138 @@ function Pricing(){
                     fill="black"
                   />
                 </svg>
-
                 Free
               </h5>
             </div>
-            <p className="card-text card-text-features"></p>
+            <p class="card-text card-text-features"></p>
           </div>
-          <ul className="list-group list-group-flush">
-            <li className="list-group-item text-center border-bottom-0 m-0 p-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-center border-bottom-0 m-0 p-0">
               Starting at
             </li>
-            <li className="list-group-item fs-4 text-center p-0">
+            <li class="list-group-item fs-4 text-center p-0">
               $ <span>0</span>/month
             </li>
           </ul>
-          <div
-            className="card-body m-auto d-flex justify-content-center align-items-center"
-          >
-            <a href="#" className="btn btn-primary">Subscribe</a>
+          <div class="card-body m-auto d-flex justify-content-center align-items-center">
+            <a href="#" class="btn btn-primary">
+              Subscribe
+            </a>
           </div>
         </div>
-        <div className="card images-container-2">
-          <img src={free}
-           
-            className="card-img-top image-2"
-            alt="Features"
-          />
-          <div className="card-body py-2">
-            <div className="d-flex align-items-center ms-3">
-              <img
-                src={regular}
-                className="features-icon"
-                alt=""
-              />
-              <h5 className="card-title card-title-features">Regular</h5>
+        <div class="card images-container-2">
+          <img src={feature2} class="card-img-top image-2" alt="Features" />
+          <div class="card-body py-2">
+            <div class="d-flex align-items-center ms-3">
+              <img src={facebookLike} class="features-icon" alt="" />
+              <h5 class="card-title card-title-features">Regular</h5>
             </div>
-            <p className="card-text card-text-features">
+            <p class="card-text card-text-features">
               For small conferences and workshops with 50 attendees per month
               with a Auditorium and booth included along with the choice of your
               event name in bizconnect URL.
             </p>
           </div>
-          <ul className="list-group list-group-flush">
-            <li className="list-group-item text-center border-bottom-0 m-0 p-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-center border-bottom-0 m-0 p-0">
               Starting at
             </li>
-            <li className="list-group-item fs-4 text-center p-0">
+            <li class="list-group-item fs-4 text-center p-0">
               $ <span>0</span>/month
             </li>
           </ul>
-          <div
-            className="card-body m-auto d-flex justify-content-center align-items-center"
-          >
-            <a href="#" className="btn btn-primary">Subscribe</a>
+          <div class="card-body m-auto d-flex justify-content-center align-items-center">
+            <a href="#" class="btn btn-primary">
+              Subscribe
+            </a>
           </div>
         </div>
-        <div className="card images-container-3">
-          <img
-            src={small} height='100px' width='100px'
-            className="card-img-top image-3"
-            alt="Features"
-          />
-          <div className="card-body py-2">
-            <div className="d-flex align-items-center ms-3">
-              <img
-                src="./images/subscription/Graduation Cap.png"
-                className="features-icon"
-                alt=""
-              />
-              <h5 className="card-title card-title-features">Perfect</h5>
+        <div class="card images-container-3">
+          <img src={feature3} class="card-img-top image-3" alt="Features" />
+          <div class="card-body py-2">
+            <div class="d-flex align-items-center ms-3">
+              <img src={graduationCup} class="features-icon" alt="" />
+              <h5 class="card-title card-title-features">Perfect</h5>
             </div>
-            <p className="card-text card-text-features">
+            <p class="card-text card-text-features">
               For small interactive events and webinars with 200 attendees per
               month. Engage with your audience and host them on the platform in
               any language of your choice.
             </p>
           </div>
-          <ul className="list-group list-group-flush">
-            <li className="list-group-item text-center border-bottom-0 m-0 p-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-center border-bottom-0 m-0 p-0">
               Starting at
             </li>
-            <li className="list-group-item fs-4 text-center p-0">
+            <li class="list-group-item fs-4 text-center p-0">
               $ <span>0</span>/month
             </li>
           </ul>
-          <div
-            className="card-body m-auto d-flex justify-content-center align-items-center"
-          >
-            <a href="#" className="btn btn-primary">Subscribe</a>
+          <div class="card-body m-auto d-flex justify-content-center align-items-center">
+            <a href="#" class="btn btn-primary">
+              Subscribe
+            </a>
           </div>
         </div>
-        <div className="card images-container-4">
-          <img
-            src={medium}
-            className="card-img-top image-4"
-            alt="Features"
-          />
-          <div className="card-body py-2">
-            <div className="d-flex align-items-center ms-3">
-              <img
-                src={custom}
-                className="features-icon"
-                alt=""
-              />
-              <h5 className="card-title card-title-features">Custom</h5>
+        <div class="card images-container-4">
+          <img src={feature4} class="card-img-top image-4" alt="Features" />
+          <div class="card-body py-2">
+            <div class="d-flex align-items-center ms-3">
+              <img src={prize} class="features-icon" alt="" />
+              <h5 class="card-title card-title-features">Custom</h5>
             </div>
-            <p className="card-text card-text-features">
+            <p class="card-text card-text-features">
               For regular events and fairs with 500 attendees per month. Expand
               your connections by networking with attendees that match your
               interests.
             </p>
           </div>
-          <ul className="list-group list-group-flush">
-            <li className="list-group-item text-center border-bottom-0 m-0 p-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-center border-bottom-0 m-0 p-0">
               Starting at
             </li>
-            <li className="list-group-item fs-4 text-center p-0">
+            <li class="list-group-item fs-4 text-center p-0">
               $ <span>0</span>/month
             </li>
           </ul>
-          <div
-            className="card-body m-auto d-flex justify-content-center align-items-center"
-          >
-            <a href="#" className="btn btn-primary">Subscribe</a>
+          <div class="card-body m-auto d-flex justify-content-center align-items-center">
+            <a href="#" class="btn btn-primary">
+              Subscribe
+            </a>
           </div>
         </div>
-        <div className="card images-container-5">
-          <img
-            src={large}
-            className="card-img-top image-5"
-            alt="Features"
-          />
-          <div className="card-body py-2">
-            <div className="d-flex align-items-center ms-3">
-              <img
-                src={feature}
-                className="features-icon"
-                alt=""
-              />
-              <h5 className="card-title card-title-features">Features</h5>
+        <div class="card images-container-5">
+          <img src={feature5} class="card-img-top image-5" alt="Features" />
+          <div class="card-body py-2">
+            <div class="d-flex align-items-center ms-3">
+              <img src={trophy} class="features-icon" alt="" />
+              <h5 class="card-title card-title-features">Features</h5>
             </div>
-            <p className="card-text card-text-features">
+            <p class="card-text card-text-features">
               For large events, expos and summits with 1000 attendees per month.
               Build the most visually striking event with moving banners and
               customize it in any way you want. Talk to us to explore the
               unlimited possibilities!
             </p>
           </div>
-          <ul className="list-group list-group-flush">
-            <li className="list-group-item text-center border-bottom-0 m-0 p-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-center border-bottom-0 m-0 p-0">
               Starting at
             </li>
-            <li className="list-group-item fs-4 text-center p-0">
+            <li class="list-group-item fs-4 text-center p-0">
               $ <span>0</span>/month
             </li>
           </ul>
-          <div
-            className="card-body m-auto d-flex justify-content-center align-items-center"
-          >
-            <a href="#" className="btn btn-primary">Subscribe</a>
+          <div class="card-body m-auto d-flex justify-content-center align-items-center">
+            <a href="#" class="btn btn-primary">
+              Subscribe
+            </a>
           </div>
         </div>
       </div>
+
+
+
 
       <div className="hide px-lg-5 mx-lg-5">
 
