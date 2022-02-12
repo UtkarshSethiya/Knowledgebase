@@ -30,7 +30,6 @@ function App() {
 
 
 
-
 <ScrollToTop>
 <Routes>
 
@@ -46,7 +45,7 @@ function App() {
     </Routes>
     </ScrollToTop>
    
-    <Footer/>
+  
 
 </div>
 

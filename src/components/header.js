@@ -18,7 +18,7 @@ return(<div className='row '>
     <div className='col middle  '  > </div>
 
     <div className='col-5 navbar  subscribe'>
-    <Link className="topbuttons btn"to="/request">Submit a Request</Link>
+ 
     <Link className="topbuttons btn" to="/pricing/pricing"><i class="bi bi-cash-coin"></i> Pricing</Link>
    <Link  className="topbuttons btn " to="/calculator"><i class="bi bi-calculator-fill"></i> Calculator</Link>
  

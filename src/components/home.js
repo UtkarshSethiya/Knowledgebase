@@ -1,7 +1,7 @@
-import Content from "./maincontent";
+
 import Header from "./header";
 import React from 'react';
-
+import Calculator from "./calculator";
 
 import './home.css';
 
@@ -9,14 +9,9 @@ import './home.css';
 function Home(){
 
     return(<div>
-        <Header/>
-    
+     
 
-
-<br></br><br></br><br></br>
-
-
-<Content/>
+<Calculator/>
 
 
 <br></br><br></br><br></br>
