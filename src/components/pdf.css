@@ -22,6 +22,9 @@ font-size: 11px;
     text-align: start;
     margin:10px;
 }
+.words{
+    font-size: 13px !important;
+}
 #qotform{
     display: none;
 }
@@ -36,6 +39,7 @@ font-size: 11px;
     font-weight: 600;
 }
 .row{
+    
     margin-bottom: 3px;
 }
 .adress{
@@ -43,8 +47,8 @@ font-size: 11px;
     font-size: 12px;
 }
 #qotation{
- display: none;
 
+display: none;
 }
 .qotationbutton{
     font-family: Roboto;

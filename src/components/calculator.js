@@ -107,7 +107,7 @@ return(
             
             
             <div className='calheading'> <pre></pre> <pre></pre><pre></pre> <pre></pre><pre></pre>
-            <h1 id='font'>Calculator</h1>
+            <h1 id='font'>CALCULATOR</h1>
             <pre></pre> <pre></pre><pre></pre> <pre></pre>
             </div>
            
@@ -185,25 +185,25 @@ return(
                 <div className='row' ><pre></pre>
                  <div className="form-check col-3">
   <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onClick={twohundred} ></input>
-  <label className="form-check-label" for="flexRadioDefault1">
+  <label className="form-check-label attendenumber" for="flexRadioDefault1">
     200 to 500 
   </label>
 </div>
 <div class="form-check col-3">
-  <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={fivehundred} ></input>
-  <label className="form-check-label" for="flexRadioDefault2">
+  <input className="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault2" onClick={fivehundred} ></input>
+  <label className="form-check-label attendenumber" for="flexRadioDefault2">
     500 to 1000 
   </label>
 </div>
 <div class="form-check col-3">
   <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" onClick={thousand} ></input>
-  <label className="form-check-label" for="flexRadioDefault2">
+  <label className="form-check-label attendenumber" for="flexRadioDefault2">
   1000+ 
   </label>
 </div>
                  </div>
                  <pre></pre><pre></pre>
-               <div id='plancont'><h6   id='plan'></h6><Link id='custom' to='/calculator_custom' className='  btn btn-outline-primary btn2'>Continue</Link> <Link id='small' to='/calculator_small' className='  btn btn-outline-primary btn2'>Continue</Link><Link id='medium' to='/calculator_medium' className='  btn btn-outline-primary btn2'>Continue</Link></div>
+               <div id='plancont'><h6   id='plan'></h6><Link id='custom' to='/calculator_custom' className=' btn btn-outline-primary btn2 '>Continue</Link> <Link id='small' to='/calculator_small' className='  btn btn-outline-primary btn2'>Continue</Link><Link id='medium' to='/calculator_medium' className='  btn btn-outline-primary btn2'>Continue</Link></div>
             
                 </div>
                 

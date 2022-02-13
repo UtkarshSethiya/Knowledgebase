@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto-Light.ttf);
+  }
+
+
 .calcontainer{
  border:1px solid lightgray;
  border-radius: 20px;
@@ -7,7 +13,17 @@
 }
 #flexCheckChecked{
     font-size: 30px !important;
+   
 }
+.attendenumber{
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+.form-check-input{
+    margin-left: 25px;
+}
+
 #plantype{
     font-family:heading;
 font-style: normal;
@@ -34,12 +50,15 @@ font-size: 16px;
 #three{
     font-size: 30px !important;
 }
+.whitelabelcheck{
+    margin-top: 35px !important;
+}
 .total{  
     text-align: center;
     background: #071BC5;
     padding: 10px;
 border-radius: 14px;
-font-family: RobotoFlex;
+font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 font-size: 58px;
@@ -59,7 +78,7 @@ color: white;
 .fheading{
     font-family: Roboto;
 font-style: normal;
-font-weight: 300;
+font-weight: 500 !important;
 font-size: 33px;
 text-align: center;
 }
@@ -171,7 +190,7 @@ input[type="range"]::-webkit-slider-thumb {
   }
   
 .calheading{
-    background: #39B587;
+    background:rgba(196, 196, 196, 1);
 }
 #font{
     font-family:  heading;

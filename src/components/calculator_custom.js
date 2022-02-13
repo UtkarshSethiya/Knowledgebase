@@ -298,7 +298,7 @@ today = dd + '/' + mm + '/' + yyyy;
             
           
             <div className='calheading'> <pre></pre> <pre></pre><pre></pre> <pre></pre>
-            <h1 id='font'>Calculator</h1>
+            <h1 id='font'>CALCULATOR</h1>
             <pre></pre> <pre></pre><pre></pre> <pre></pre>
             </div>
            
@@ -310,8 +310,8 @@ today = dd + '/' + mm + '/' + yyyy;
                 
                 <p id='plantype'>Custom Plan</p>
                     <h3 className='fheading'>Step 3 : Select your volume <pre></pre> </h3>
-                    <div className='row'>
-                <div className="col-md-7 step   ">
+                    <div className='row step '>
+                <div className="col-md-7   ">
                     
                    
                     <pre></pre>
@@ -395,7 +395,7 @@ today = dd + '/' + mm + '/' + yyyy;
                            </p>
                            
                        </div>
-                      <div className='col-3'><input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" onChange={whitelabelnumber}></input><pre></pre>  <h6>Cost: ${ whitelabelcost}</h6>
+                      <div className='col-3'><input class="form-check-input whitelabelcheck" type="checkbox" value="" id="flexCheckChecked" onChange={whitelabelnumber}></input><pre></pre>  <h6>Cost: ${ whitelabelcost}</h6>
      
      </div>
                       
@@ -418,12 +418,12 @@ today = dd + '/' + mm + '/' + yyyy;
                              </div></div>
     
                              <div className="  row step ">
-                            <h3>Step 6: 3D and 360° Walkthrus  </h3>
+                            <h3 className='fheading'>Step 6: 3D and 360° Walkthrus <pre></pre> </h3>
                             <pre></pre><pre></pre><pre></pre>
-                            <div className='col'><h5>Branded Lobby Walkthrough ($300/event) <Tippy className='tippy' content="Depending on no of events 3D and 360° Walkthrus will be charged Max to 3 doors"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy> </h5></div>
+                            <div className='col-5'><p>Branded Lobby Walkthrough ($300/event) <Tippy className='tippy' content="Depending on no of events 3D and 360° Walkthrus will be charged Max to 3 doors"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy> </p></div>
                      
                     
-                        <div className='col-3'><input class="form-check-input" type="checkbox" value="" id="three" onChange={setthreenumber}></input>
+                        <div className='col'><input class="form-check-input" type="checkbox" value="" id="three" onChange={setthreenumber}></input>
                         <pre></pre>
                         <h6>Cost: ${threecost}</h6></div>
                              </div>
@@ -463,7 +463,7 @@ today = dd + '/' + mm + '/' + yyyy;
                              <div className="  row step ">
                             <h3 className='fheading'>Step 9: Engagement<pre></pre> </h3>
                             <pre></pre><pre></pre>
-                            <div className='col-md-7'><pre></pre>
+                            <div className='col-md-6'>
                                 <div className='row'>
                             <p>Games with Leaderboard ($50/game) <Tippy className='tippy' content="For Custom plan you will be charged $50/game "><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>  </p>
                             
@@ -475,7 +475,7 @@ today = dd + '/' + mm + '/' + yyyy;
                         <input className='value inputbox' id='game'  type='number' value={games } min="0" max="50" step="1" onChange={gamesnumber} ></input><pre></pre>
                         <h6>Cost: ${gamescost}</h6></div></div></div>
     
-     <div className='col-md-7'><div className='row'>
+     <div className='col-md-6'><div className='row'>
                    <p>Photo Booth ($100/month) <Tippy className='tippy' content="You will be charged $100 per month"><button className='poper'><i class="bi bi-info-circle-fill"></i></button></Tippy>  </p>
                         <span className='col-1 zero'>0</span>
                         <div className='col-6'><input type="range" value={booth} min="0" max="10" step="1" onChange={boothnumber}  class="form-range  " id="customRange1"/></div>
@@ -507,7 +507,7 @@ today = dd + '/' + mm + '/' + yyyy;
                              <pre></pre> <pre></pre> 
                    
                    
-                            <div className='totalcontainer'> <span className='total'>Total:-${total} </span><pre></pre>
+                            <div className='totalcontainer'> <span className='total'>Total: ${total} </span><pre></pre>
                              <h5 id='message'>Great,You are eligible for Custom Plan!</h5>
                             <pre></pre>
                              <button id='buttn' className='qotationbutton' onClick={getqotform}>Get My Quotation</button>
@@ -520,7 +520,7 @@ today = dd + '/' + mm + '/' + yyyy;
                    <div className='row '>
                        <div className='col-2 '><img className='logo'  src={logo} height='80px' ></img>
                        
-                        <p className='adress'>  To , {fullname}<br></br>{mail} <br></br>   {gst}</p></div>
+                        <p className='adress'>  To : {fullname}<br></br>{mail} <br></br>   {gst}</p></div>
                        <div className='col-4 bf'>  <p> Date: {today} <br></br>   Plantype: <span className='total2'>Custom</span> </p> </div>
                         
                       
@@ -597,29 +597,29 @@ today = dd + '/' + mm + '/' + yyyy;
                      <div className='col-3 features'>${hourcost}</div>
                   </div>
                   <div className='row'>
-                      <div className='col-10 total2'>Total- ${total}<span >({totalwords}</span> dollars)</div>
+                      <div className='col-10 total2'>Total- ${total} <span className='words' >({totalwords.toUpperCase()}  DOLLARS ) </span> </div>
                      
                       
                      
                   </div>
                   </div>
-                  <p >Great ,You are eligible for Custom Plan , Talk with us !<br></br><div className='row'><span className='lastline col-8'>***Quotation Validity is for 5 days from the time of Quotation generated date  Please  get back to us at accounts@bizconnectevents.com for any queries 
+                  <p >Great ,You are Eligible for Custom Plan , Talk with us !<br></br><div className='row'><pre></pre><span className='lastline col-8'>***Quotation Validity is for 5 days from the time of Quotation generated date  Please  get back to us at accounts@bizconnectevents.com for any queries 
 
 </span></div></p>
                </div>
  
                
-        <div className='row'>    <div className='col-4'> </div>
-<div id='qotform' className='col-4 '>
+        <div className='row'>    <div className='col'> </div>
+<div id='qotform' className='col-md-5 '>
 <form class="row g-3">
 <div class="col-12">
-    <label for="inputCity"  class="form-label" >Full name *</label>
+    <label for="inputCity"  class="form-label" >Full name <span style={{color:"red"}}>*</span></label>
     <input id='inputcity'  onInput={checkname ,getname} type="text" class="form-control"   placeholder='Enter Full Name' required />
   </div>
   <div className='col-12'> </div>
   
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email *</label>
+    <label for="inputEmail4" class="form-label">Email <span style={{color:"red"}}>*</span></label>
     <input type="email" onInput={checkname ,getemail}  class="form-control" id="inputemail" placeholder='Enter Your Email' />
   </div>
   
@@ -630,7 +630,7 @@ today = dd + '/' + mm + '/' + yyyy;
   
   
   <div class="col-md-6">
-    <label for="inputCity" class="form-label">Contact Number *</label>
+    <label for="inputCity" class="form-label">Contact Number <span style={{color:"red"}}>*</span></label>
     <input  onInput={checkname} type="tel"   class="form-control" required placeholder='Contact Number ' id="inputmobile" />
   </div>
   <div class="col-md-6">
@@ -650,8 +650,10 @@ today = dd + '/' + mm + '/' + yyyy;
   </div>
   
 </form>
-</div></div>    
-                
+</div>
+<div className='col'></div>
+</div>    
+     <pre></pre> <pre></pre>     <pre></pre>               
                 
                   </div>
               
