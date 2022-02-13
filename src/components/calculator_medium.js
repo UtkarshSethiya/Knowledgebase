@@ -278,25 +278,7 @@ function checkname(event){
     
     return(
             <div className="row ">
-                 <div class="container-fluid row navbar">
-    <div className='col-3  topleft navbar  '>
-    <a class="navbar-brand" href="https://bizconnectevents.com/" ><img className='logo' src={logo} height="62px" width="124px"></img>   </a>
-    <Link class="navbar-brand home " to='/home'> Home</Link>
-    
-    </div>
-    
-    <div className='col middle  '  > </div>
-
-    <div className='col-4 navbar  subscribe'>
-    <Link className="topbuttons btn"to="/request">Submit a Request</Link>
-    <Link className="topbuttons btn" to="/pricing/pricing"><i class="bi bi-cash-coin"></i> Pricing</Link>
- 
- 
-    <button className="btn subscribe btn1 " type="submit">Subscribe</button>
-  
-    </div>
-    
-  </div>
+                 
 
             
            
